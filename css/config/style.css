@@ -1,0 +1,41 @@
+@import url(../header.css);
+
+:root{
+    --fonte-padrao: sans-serif;
+}
+body{
+    font-family: var(--fonte-padrao);
+}
+header{
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid;
+    box-shadow: 0px 1px 10px 0px;
+}
+
+
+
+.container__formulario{
+    display: flex;
+    justify-content: center;
+    margin: 4em 0 0 0;
+}
+
+.container__itens{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+.flexbox-1{
+    display: flex;
+}
+.flexbox-geral{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.form-control{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
