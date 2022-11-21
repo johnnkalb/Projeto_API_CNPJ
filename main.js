@@ -1,4 +1,5 @@
 const cnpj = document.querySelector('#cnpj')
+// const ID = document.querySelector('#')
 const errorSpan = document.querySelector('#errorSpan')
 // const express = require('express')
 // const 
@@ -16,39 +17,28 @@ cnpj.addEventListener('blur', (e)=>{
     // headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
     headers.append('Origin','http://127.0.0.1:5500');
 
-    const options = {
-        method: 'GET',
-        mode: 'cors',  
-        cache: 'default',
+    const options = 
+        {
+        method: 'GET', 
         headers: headers
-    }
-
-
-    
-
+        };
 
     const showData = (result)=>{
         for(const campo in result){
             if(document.querySelector("#"+campo))
             document.querySelector("#"+campo).value = result[campo]
-            console.log(campo, "II")
+            // console.log(campo)
         }
     }
-  fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
-  .then((response)=>{response.json()
-    .then(data=>showData(data), errorSpan.innerHTML='')
-     .catch((e=> console.log('error')))
-    })
-    .catch(e=> console.log=``)
+
+    // https://receitaws.com.br/v1/cnpj/
+    // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
+
+    
+    fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
+      .then(response => response.json())
+    //   .then(response => console.table(response))
+      .then(response => showData(response))
+      
+      .catch(err => console.error(err));
 })
-// var client = new HttpClient();
-// var request = new HttpRequestMessage();
-// request.RequestUri = new Uri("https://api-publica.speedio.com.br/buscarcnpj?cnpj=31308464000193");
-// request.Method = HttpMethod.Get;
-
-// request.Headers.Add("Accept", "*/*");
-// request.Headers.Add("User-Agent", "Thunder Client (https://www.thunderclient.com)");
-
-// var response = await client.SendAsync(request);
-// var result = await response.Content.ReadAsStringAsync();
-// Console.WriteLine(result);
