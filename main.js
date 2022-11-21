@@ -1,6 +1,7 @@
 const cnpj = document.querySelector('#CNPJ')
 // const ID = document.querySelector('#')
 const errorSpan = document.querySelector('#errorSpan')
+const form = document.querySelector('.formulario')
 // const express = require('express')
 // const 
 
@@ -42,7 +43,7 @@ cnpj.addEventListener('blur', (e)=>{
     //   .then(response => console.table(response))
       .then(response => showData(response))
       
-      .catch(err => console.error(err));
+      .catch(err => console.error(err)), form.reset();
 })
 
 // function (showData){
