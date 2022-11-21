@@ -10,7 +10,7 @@ const errorSpan = document.querySelector('#errorSpan')
 
 cnpj.addEventListener('blur', (e)=>{
     let search = cnpj.value.replace('.', '') //remove os caracteres do link
-    
+ 
     let headers = new Headers();
     headers.append("Accept", "*/*");
     headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
@@ -25,8 +25,10 @@ cnpj.addEventListener('blur', (e)=>{
 
     const showData = (result)=>{
         for(const campo in result){
-            if(document.querySelector("#"+campo))
-            document.querySelector("#"+campo).value = result[campo]
+            if(document.querySelector('#'+campo))
+            // document.querySelector("#"+campo).value = result[campo]
+            document.querySelector('#'+campo).value = result[campo]
+            
             // console.log(campo)
         }
     }
