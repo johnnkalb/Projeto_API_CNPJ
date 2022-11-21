@@ -29,7 +29,7 @@ cnpj.addEventListener('blur', (e)=>{
         headers: headers
     }
 
-  fetch(`https://receitaws.com.br/v1/cnpj/${search}`, options)
+  fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
     .then(response=>{response.json()
         .then(data=>showData(data), errorSpan.innerHTML=``)
     })
