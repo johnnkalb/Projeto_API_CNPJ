@@ -42,3 +42,13 @@ cnpj.addEventListener('blur', (e)=>{
       
       .catch(err => console.error(err));
 })
+
+// function (showData){
+//     inserirDados.innerHtml = 
+//     `
+//     <div class="container__itens">
+//     <label for="porte" class="subtitulo--resultado">Porte</label>
+//     <input type="text" id="porte" class="form-control">
+//     </div>
+//     `
+// }
