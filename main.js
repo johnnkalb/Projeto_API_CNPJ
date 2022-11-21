@@ -1,4 +1,4 @@
-const cnpj = document.querySelector('#cnpj')
+const cnpj = document.querySelector('#CNPJ')
 // const ID = document.querySelector('#')
 const errorSpan = document.querySelector('#errorSpan')
 // const express = require('express')
