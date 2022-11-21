@@ -1,0 +1,20 @@
+{
+  "NOME FANTASIA": "ROQUE MATERIAL DE CONSTRUCAO",
+  "RAZAO SOCIAL": "ROQUE MATERIAIS DE CONSTRUCAO LTDA",
+  "CNPJ": "31308464000193",
+  "STATUS": "ATIVA",
+  "CNAE PRINCIPAL DESCRICAO": "Comércio varejista de materiais de construção em geral",
+  "CNAE PRINCIPAL CODIGO": "4744099",
+  "CEP": "27210254",
+  "DATA ABERTURA": "22/08/2018",
+  "DDD": "24",
+  "TELEFONE": "33456876",
+  "EMAIL": "roquematconstr@gmail.com",
+  "TIPO LOGRADOURO": "RUA",
+  "LOGRADOURO": "MIL E DEZESSETE",
+  "NUMERO": "330",
+  "COMPLEMENTO": "",
+  "BAIRRO": "SANTO AGOSTINHO",
+  "MUNICIPIO": "Volta redonda",
+  "UF": "RJ"
+}
