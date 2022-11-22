@@ -35,7 +35,7 @@ header{
     border-radius: 5px;
 }
 .form-control{
-    color: red;
+    color: rgb(45, 19, 161);
     font-weight: bold;
     font-size: 1.2em;
 }
