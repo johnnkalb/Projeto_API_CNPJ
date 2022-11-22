@@ -140,7 +140,7 @@ cnpj.addEventListener('blur', (e)=>{
                   
             
                         `
-                        console.table(result)
+                        console.table(result.object)
                         // console.table(result)
                 }
 
@@ -149,24 +149,20 @@ cnpj.addEventListener('blur', (e)=>{
 
     
     fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
-      .then(response => response.json())
+    .then( resposta => console.log(resposta.json()),
+    )
     //   .then(response => console.table(response))
       .then(response => exibirDados(response))
       
-      .catch(err => console.error(err)), form.reset(),   inserirDados.innerHTML += 
+      .catch(err => console.error(err)),  inserirDados.innerHTML += 
       ` 
   <div class="flexbox-1">
       <div class="container__itens">
           <label for="cnpj" class="subtitulo--resultado">CNPJ</label>
-          <input type="text" id="CNPJ" class="form-control" name="RAZAO" value="${result.CNPJ}">
+          <input type="text" id="CNPJ" class="form-control" name="RAZAO">
           <!-- <span id="error"></span> -->
-      </div>;`
-        
+      </div>;`;})
      //EXECUTA
-
-      
-})
-
 // function (showData){
 //     inserirDados.innerHtml = 
 //     `
