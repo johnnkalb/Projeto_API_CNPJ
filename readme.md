@@ -1,20 +1,20 @@
-{
-  "NOME FANTASIA": "QUERY",
-  "RAZAO SOCIAL": "QUERY TECNOLOGIA DA INFORMACAO LTDA",
-  "CNPJ": "32840757000180",
-  "STATUS": "ATIVA",
-  "CNAE PRINCIPAL DESCRICAO": "Desenvolvimento e licenciamento de programas de computador customizáveis",
-  "CNAE PRINCIPAL CODIGO": "6202300",
-  "CEP": "65060541",
-  "DATA ABERTURA": "21/02/2019",
-  "DDD": "98",
-  "TELEFONE": "81270800",
-  "EMAIL": "roberiolemos@gmail.com",
-  "TIPO LOGRADOURO": "RODOVIA",
-  "LOGRADOURO": "MA - 201/ ESTRADA DE RIBAMAR",
-  "NUMERO": "43",
-  "COMPLEMENTO": "",
-  "BAIRRO": "FORQUILHA",
-  "MUNICIPIO": "Sao luis",
-  "UF": "MA"
+export interface Main {
+    "NOME FANTASIA":            string;
+    "RAZAO SOCIAL":             string;
+    CNPJ:                       string;
+    STATUS:                     string;
+    "CNAE PRINCIPAL DESCRICAO": string;
+    "CNAE PRINCIPAL CODIGO":    string;
+    CEP:                        string;
+    "DATA ABERTURA":            string;
+    DDD:                        string;
+    TELEFONE:                   string;
+    EMAIL:                      string;
+    "TIPO LOGRADOURO":          string;
+    LOGRADOURO:                 string;
+    NUMERO:                     string;
+    COMPLEMENTO:                string;
+    BAIRRO:                     string;
+    MUNICIPIO:                  string;
+    UF:                         string;
 }
