@@ -6,33 +6,41 @@ const formulario = document.querySelector('container-form')
 const erro = document.querySelector('.erro')
 const inserirDados = document.querySelector('.ola')
 
-
-
-
-const showData = (result)=>{
-    document.querySelector('#CNPJ').value = result.CNPJ
-    document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
-    document.querySelector('#SITUACAO').value = result.STATUS
-    document.querySelector('#RAZAOSOCIAL').value = result["RAZAO SOCIAL"]
-    document.querySelector('#CNAEDESC').value = result["CNAE PRINCIPAL DESCRICAO"]
-    document.querySelector('#CNAECOD').value = result["CNAE PRINCIPAL CODIGO"]
-    document.querySelector('#CEP').value = result.CEP
-    document.querySelector('#ABERTURA').value = result["DATA ABERTURA"]
-    document.querySelector('#DDD').value = result.DDD
-    document.querySelector('#TELEFONE').value = result.TELEFONE
-    document.querySelector('#EMAIL').value = result.EMAIL
-    document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
-    document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
-    document.querySelector('#NUMERO').value = result.NUMERO
-    document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
-    document.querySelector('#BAIRRO').value = result.BAIRRO
-    document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
-    document.querySelector('#UF').value = result.UF
+function deuErro (){
+    document.querySelector('#RAZAOSOCIAL').value = 'ERRO DE CONEXÃO OU LIMITE DE REQUISIÇÕES EXCEDIDAS(50).'
 }
 
 
-// const express = require('express')
+const showData = (result)=>{
+    if(result.error){
+            console.log(result)
+            document.querySelector('#RAZAOSOCIAL').value = result.error
+    }
+        else{
+                document.querySelector('#CNPJ').value = result.CNPJ
+                document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
+                document.querySelector('#SITUACAO').value = result.STATUS
+                document.querySelector('#RAZAOSOCIAL').value = result["RAZAO SOCIAL"]
+                document.querySelector('#CNAEDESC').value = result["CNAE PRINCIPAL DESCRICAO"]
+                    document.querySelector('#CNAECOD').value = result["CNAE PRINCIPAL CODIGO"]
+                    document.querySelector('#CEP').value = result.CEP
+                    document.querySelector('#ABERTURA').value = result["DATA ABERTURA"]
+                    document.querySelector('#DDD').value = result.DDD
+                    document.querySelector('#TELEFONE').value = result.TELEFONE
+                    document.querySelector('#EMAIL').value = result.EMAIL
+                        document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
+                            document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
+                                document.querySelector('#NUMERO').value = result.NUMERO
+                                document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
+                                document.querySelector('#BAIRRO').value = result.BAIRRO
+                                document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
+                                document.querySelector('#UF').value = result.UF
+                }
+        }
 
+
+
+// 31308464000193 CNPJ ROQUE PARA SEARCH
 // 32840757000180 CNPJ QUERY PARA SEARCH
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
 
@@ -64,7 +72,7 @@ cnpj.addEventListener('blur', (e)=>{
     //   .then(response => console.table(response))
       .then(response => showData(response))
       
-      .catch(err => console.error(err)), document.querySelector(".formulario").reset();})
+      .catch(err => console.error(err)), document.querySelector(".formulario").reset(), deuErro()})
         
      //EXECUTA
 
