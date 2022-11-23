@@ -6,7 +6,12 @@ const erro = document.querySelector('.erro')
 const inserirDados = document.querySelector('.ola')
 
 function deuErro (){
-    document.querySelector('#RAZAOSOCIAL').value = 'ERRO DE CONEXÃO OU LIMITE DE REQUISIÇÕES EXCEDIDAS(50).'
+    // document.querySelector('#RAZAOSOCIAL').value = 'ERRO DE CONEXÃO OU LIMITE DE REQUISIÇÕES EXCEDIDAS(50).'
+    alert(` ATENÇÂO!!
+    
+    -- ERRO DE CONEXÃO. --
+                  OU 
+    -- LIMITE DE REQUISIÇÕES EXCEDIDAS(50). --`)
 }
 
 
