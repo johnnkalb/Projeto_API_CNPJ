@@ -1,5 +1,4 @@
 const cnpj = document.querySelector('#CNPJ')
-// const ID = document.querySelector('#')
 const errorSpan = document.querySelector('#errorSpan')
 const form = document.querySelector('.flexbox-1')
 const formulario = document.querySelector('container-form')
@@ -54,7 +53,6 @@ cnpj.addEventListener('blur', (e)=>{
     let headers = new Headers();
     headers.append("Accept", "*/*");
     headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
-    // headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
     headers.append('Origin','http://127.0.0.1:5500');
 
     const options = 
