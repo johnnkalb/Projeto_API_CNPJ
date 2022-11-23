@@ -37,8 +37,9 @@ cnpj.addEventListener('blur', (e)=>{
             ;
                 if(result.error){
 
-                    inserirDados.innerHTML = '<span>CNPJ Não Encontrado...</span>'
-                        }else{
+                    inserirDados.innerHTML = `<span>${result.error}</span>`
+                }
+                    else{
                         inserirDados.innerHTML += 
                         ` 
                 
@@ -71,33 +72,33 @@ cnpj.addEventListener('blur', (e)=>{
                     </div>
 
                     <div class="container__itens">
-                        <label for="CNAEDESC" class="subtitulo--resultado">CNAE Principal Código</label>
-                        <input type="text" id="CNAEDESC" class="form-control" value="${result["CNAE PRINCIPAL CODIGO"]}">
+                        <label for="CNAECOD" class="subtitulo--resultado">CNAE Principal Código</label>
+                        <input type="text" id="CNAECOD" class="form-control" value="${result["CNAE PRINCIPAL CODIGO"]}">
                     </div>
 
                     <div class="container__itens">
-                        <label for="situacao" class="subtitulo--resultado">CEP</label>
-                        <input type="CEP" id="DATA ABERTURA" class="form-control" value="${result.CEP}">
+                        <label for="CEP" class="subtitulo--resultado">CEP</label>
+                        <input type="CEP" id="CEP" class="form-control" value="${result.CEP}">
                     </div>
 
                     <div class="container__itens">
-                        <label for="situacao" class="subtitulo--resultado">Data Abertura</label>
-                        <input type="CEP" id="DATA ABERTURA" class="form-control" value="${result["DATA ABERTURA"]}">
+                        <label for="ABERTURA" class="subtitulo--resultado">Data Abertura</label>
+                        <input type="CEP" id="ABERTURA" class="form-control" value="${result["DATA ABERTURA"]}">
                     </div>
                 
                     <div class="container__itens">
-                        <label for="situacao" class="subtitulo--resultado">DDD</label>
+                        <label for="DDD" class="subtitulo--resultado">DDD</label>
                         <input type="text" id="DDD" class="form-control" value="${result.DDD}">
                     </div>
 
                     <div class="container__itens">
-                        <label for="situacao" class="subtitulo--resultado">Telefone</label>
+                        <label for="TELEFONE" class="subtitulo--resultado">Telefone</label>
                         <input type="text" id="TELEFONE" class="form-control" value="${result.TELEFONE}">
                     </div>
 
 
                     <div class="container__itens">
-                        <label for="situacao" class="subtitulo--resultado">Email</label>
+                        <label for="EMAIL" class="subtitulo--resultado">Email</label>
                         <input type="text" id="EMAIL" class="form-control" value="${result.EMAIL}">
                     </div>
 
@@ -126,17 +127,17 @@ cnpj.addEventListener('blur', (e)=>{
                         </div>
 
                         <div class="container__itens">
-                            <label for="situacao" class="subtitulo--resultado">Bairro</label>
+                            <label for="BAIRRO" class="subtitulo--resultado">Bairro</label>
                             <input type="text" id="BAIRRO" class="form-control" value="${result.BAIRRO}">
                         </div>
 
                         <div class="container__itens">
-                            <label for="situacao" class="subtitulo--resultado">Municipio</label>
+                            <label for="MUNICIPIO" class="subtitulo--resultado">Municipio</label>
                             <input type="text" id="MUNICIPIO" class="form-control" value="${result.MUNICIPIO}">
                         </div>
 
                         <div class="container__itens">
-                            <label for="situacao" class="subtitulo--resultado">Unidade Federativa(UF)</label>
+                            <label for="UF" class="subtitulo--resultado">Unidade Federativa(UF)</label>
                             <input type="text" id="UF" class="form-control" value="${result.UF}">
                         </div>
 
