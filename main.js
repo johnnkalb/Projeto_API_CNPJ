@@ -28,9 +28,12 @@ cnpj.addEventListener('blur', (e)=>{
         headers: headers,
         };
 
-       
+       function carregando(){
+        inserirDados.innerHTML = ' <img src="./icons/Spinner-0.7s-114px.svg" alt="CARREGANDO">'
+       }
         function exibirDados(result){
             inserirDados.innerHTML = ''; //Limpa
+            ;
                 
                     inserirDados.innerHTML += 
                     ` 
@@ -47,19 +50,20 @@ cnpj.addEventListener('blur', (e)=>{
                     </div>
 
                     <div class="container__itens">
-                        <label for="NOMEFANTASIA" class="subtitulo--resultado">Razão Social</label>
-                        <input type="text" id='NOMEFANTASIA' class="form-control" value="${result["RAZAO SOCIAL"]}">
-                        <span class="erro"></span>
-                    </div>
+                    <label for="tipo" class="subtitulo--resultado">Situação</label>
+                    <input type="text" id="tipo" class="form-control" value="${result.STATUS}">
+                </div>
                 
                
                    
                     
                 </div>
                     <div class="container__itens">
-                        <label for="tipo" class="subtitulo--resultado">Situação</label>
-                        <input type="text" id="tipo" class="form-control" value="${result.STATUS}">
+                        <label for="NOMEFANTASIA" class="subtitulo--resultado">Razão Social</label>
+                        <input type="text" id='NOMEFANTASIA' class="form-control" value="${result["RAZAO SOCIAL"]}">
+                        <span class="erro"></span>
                     </div>
+                    
                 
                 <div class="container__itens">
                     <label for="CNAEDESC" class="subtitulo--resultado">CNAE Principal Desc.</label>
@@ -143,6 +147,8 @@ cnpj.addEventListener('blur', (e)=>{
                         console.table(result)
                         // console.table(result)
                 }
+
+
 
     // https://receitaws.com.br/v1/cnpj/
     // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
