@@ -43,12 +43,12 @@ cnpj.addEventListener('blur', (e)=>{
 
                     <div class="container__itens">
                         <label for="NOME FANTASIA" class="subtitulo--resultado">Nome Fantasia</label>
-                        <input type="text" id="NOME FANTASIA" class="form-control" value="${result.NOME}">
+                        <input type="text" id="NOME FANTASIA" class="form-control" value="${result["NOME FANTASIA"]}">
                     </div>
 
                     <div class="container__itens">
                         <label for="NOMEFANTASIA" class="subtitulo--resultado">Razão Social</label>
-                        <input type="text" id='NOMEFANTASIA' class="form-control" value="${result.NOME_FANTASIA}">
+                        <input type="text" id='NOMEFANTASIA' class="form-control" value="${result["RAZAO SOCIAL"]}">
                         <span class="erro"></span>
                     </div>
                 
@@ -63,12 +63,12 @@ cnpj.addEventListener('blur', (e)=>{
                 
                 <div class="container__itens">
                     <label for="CNAEDESC" class="subtitulo--resultado">CNAE Principal Desc.</label>
-                    <input type="text" id="CNAEDESC" class="form-control" value="${result.U}">
+                    <input type="text" id="CNAEDESC" class="form-control" value="${result["CNAE PRINCIPAL DESCRICAO"]}">
                 </div>
 
                 <div class="container__itens">
                     <label for="CNAEDESC" class="subtitulo--resultado">CNAE Principal Código</label>
-                    <input type="text" id="CNAEDESC" class="form-control" value="${result.U}">
+                    <input type="text" id="CNAEDESC" class="form-control" value="${result["CNAE PRINCIPAL CODIGO"]}">
                 </div>
 
                 <div class="container__itens">
@@ -78,7 +78,7 @@ cnpj.addEventListener('blur', (e)=>{
 
                 <div class="container__itens">
                     <label for="situacao" class="subtitulo--resultado">Data Abertura</label>
-                    <input type="CEP" id="DATA ABERTURA" class="form-control" value="${result.U}">
+                    <input type="CEP" id="DATA ABERTURA" class="form-control" value="${result["DATA ABERTURA"]}">
                 </div>
                
                 <div class="container__itens">
@@ -103,7 +103,7 @@ cnpj.addEventListener('blur', (e)=>{
 
                     <div class="container__itens">
                         <label for="TIPOLOGRADOURO" class="subtitulo--resultado">Tipo Logradouro</label>
-                        <input type="text" id="TIPOLOGRADOURO" class="form-control" value="${result.U}">
+                        <input type="text" id="TIPOLOGRADOURO" class="form-control" value="${result["TIPO LOGRADOURO"]}">
                     </div>
 
                     <div class="container__itens">
