@@ -56,11 +56,6 @@ cnpj.addEventListener('blur', (e)=>{
                         ` 
                 
                     <div class='flexbox-1'>
-
-                    <div class="container__itens">
-                                <label for="CNPJ" class="subtitulo--resultado">CNPJ</label>
-                                <input type="text" id="CNPJ" class="form-control" value="${result.CNPJ}">
-                            </div>
                     
                             <div class="container__itens">
                                 <label for="NOME FANTASIA" class="subtitulo--resultado">Nome Fantasia</label>
