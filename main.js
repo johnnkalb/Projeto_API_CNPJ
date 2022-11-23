@@ -15,7 +15,12 @@ const inserirDados = document.querySelector('.ola')
 
 
 cnpj.addEventListener('blur', (e)=>{
-    let search = cnpj.value.replace('.', '') //remove os caracteres do link
+    let search = cnpj.value.replaceAll('.', '') //remove os caracteres do link
+    
+
+
+
+
  
     let headers = new Headers();
     headers.append("Accept", "*/*");
@@ -29,21 +34,33 @@ cnpj.addEventListener('blur', (e)=>{
         headers: headers,
         };
 
-       function carregando(){
-        inserirDados.innerHTML = ' <img src="./icons/Spinner-0.7s-114px.svg" alt="CARREGANDO">'
-       }
+    //    function carregando(){
+    //     inserirDados.innerHTML = ' <img src="./icons/Spinner-0.7s-114px.svg" alt="CARREGANDO">'
+    //    }
         function exibirDados(result){
             inserirDados.innerHTML = ''; //Limpa
             ;
                 if(result.error){
 
-                    inserirDados.innerHTML = `<span>${result.error}</span>`
+                    inserirDados.innerHTML = 
+                        `
+                        <div class='flexbox-2'>
+                            <span class='mensagem-error'>${result.error}</span>
+                        </div>
+                        `
+                        console.log(result)
                 }
                     else{
-                        inserirDados.innerHTML += 
+                        
+                        inserirDados.innerHTML = 
                         ` 
                 
                     <div class='flexbox-1'>
+
+                    <div class="container__itens">
+                                <label for="CNPJ" class="subtitulo--resultado">CNPJ</label>
+                                <input type="text" id="CNPJ" class="form-control" value="${result.CNPJ}">
+                            </div>
                     
                             <div class="container__itens">
                                 <label for="NOME FANTASIA" class="subtitulo--resultado">Nome Fantasia</label>

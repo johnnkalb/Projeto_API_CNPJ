@@ -13,7 +13,9 @@ header{
     border: 1px solid;
     box-shadow: 0px 1px 10px 0px;
 }
-
+header:hover{
+    cursor: pointer;
+}
 
 
 .container__formulario{
@@ -30,6 +32,10 @@ header{
 .flexbox-1{
     display: flex;
 }
+.flexbox-2{
+    display: flex;
+    justify-content: center;
+}
 .flexbox-geral{
     border: 1px solid;
     border-radius: 5px;
@@ -38,4 +44,10 @@ header{
     color: rgb(45, 19, 161);
     font-weight: bold;
     font-size: 1.2em;
+}
+
+.mensagem-error{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
 }
