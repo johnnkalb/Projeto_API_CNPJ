@@ -44,7 +44,6 @@ cnpj.addEventListener('blur', (e)=>{
                         console.log(result)
                 }
                     else{
-                        
                             console.table(result)
                             // console.table(result)
                     }
