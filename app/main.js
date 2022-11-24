@@ -75,7 +75,7 @@ cnpj.addEventListener('blur', (e)=>{
     //   .then(response => console.table(response))
       .then(response => showData(response))
       
-      .catch(err => console.error(err)), document.querySelector(".formulario").reset(), deuErro()})
+      .catch(err => alert(err, 'Erro de Conexão, ou Limite de Requisições Excedido')), document.querySelector(".formulario").reset()})
         
      //EXECUTA
 
