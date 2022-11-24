@@ -51,7 +51,7 @@ const showData = (result)=>{
 
 
 cnpj.addEventListener('blur', (e)=>{
-    let search = cnpj.value.replaceAll('.', '') //remove os caracteres do link
+    let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
    
 
  
