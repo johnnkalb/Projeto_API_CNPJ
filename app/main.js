@@ -44,12 +44,8 @@ const showData = (result)=>{
 
 
 
-// 31308464000193 CNPJ ROQUE PARA SEARCH
-// 32840757000180 CNPJ QUERY PARA SEARCH
+
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
-
-
-
 cnpj.addEventListener('blur', (e)=>{
     let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
    
