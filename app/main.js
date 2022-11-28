@@ -22,7 +22,7 @@ const showData = (result)=>{
             // document.querySelector('#RAZAOSOCIAL').value = result.error
     }
         else{
-                document.querySelector('#CNPJ').value = result.CNPJ 
+                document.querySelector('#CNPJ').value = result.CNPJ
                 document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
                 document.querySelector('#SITUACAO').value = result.STATUS
                 document.querySelector('#RAZAOSOCIAL').value = result["RAZAO SOCIAL"]
@@ -73,7 +73,7 @@ cnpj.addEventListener('blur', (e)=>{
       .then(response => showData(response))
       
       .catch(err => alert(`${err}
-(Erro de Conexão, ou Limite de Requisições Excedido)`)), document.querySelector(".formulario").reset()})
+(ERRO)`)), document.querySelector(".formulario").reset()})
         
      //EXECUTA
 
