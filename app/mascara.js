@@ -16,7 +16,7 @@ e.preventDefault();
  ///////
 
  // Cria Máscara para CPF
- input.addEventListener("keyup", formatarCNPJ);
+ input.addEventListener("mouseout", formatarCNPJ);
 
  function formatarCNPJ(e){
 

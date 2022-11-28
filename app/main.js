@@ -35,6 +35,8 @@ const showData = (result)=>{
                                     document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                     document.querySelector('#UF').value = result.UF
 
+                
+                const mask = () => document.querySelector('#CNPJ').value = replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5") 
                 console.log(result.CNPJ)
                 }
         }
@@ -54,10 +56,10 @@ cnpj.addEventListener('blur', (e)=>{
     headers.append('Origin','http://127.0.0.1:5500');
 
     const options = 
-        {
+    {
         method: 'GET', 
         headers: headers,
-        };
+    };
 
         
 
