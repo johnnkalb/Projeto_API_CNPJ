@@ -5,14 +5,7 @@ const formulario = document.querySelector('container-form')
 const erro = document.querySelector('.erro')
 const inserirDados = document.querySelector('.ola')
 
-function deuErro (){
-    // document.querySelector('#RAZAOSOCIAL').value = 'ERRO DE CONEXÃO OU LIMITE DE REQUISIÇÕES EXCEDIDAS(50).'
-    alert(` ATENÇÂO!!
-    
-    -- ERRO DE CONEXÃO. --
-                  OU 
-    -- LIMITE DE REQUISIÇÕES EXCEDIDAS(50). --`)
-}
+
 
 
 const showData = (result)=>{
@@ -22,6 +15,7 @@ const showData = (result)=>{
             // document.querySelector('#RAZAOSOCIAL').value = result.error
     }
         else{
+            
                 document.querySelector('#CNPJ').value = result.CNPJ
                 document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
                 document.querySelector('#SITUACAO').value = result.STATUS
@@ -30,16 +24,18 @@ const showData = (result)=>{
                     document.querySelector('#CNAECOD').value = result["CNAE PRINCIPAL CODIGO"]
                     document.querySelector('#CEP').value = result.CEP
                     document.querySelector('#ABERTURA').value = result["DATA ABERTURA"]
-                    document.querySelector('#DDD').value = result.DDD
-                    document.querySelector('#TELEFONE').value = result.TELEFONE
-                    document.querySelector('#EMAIL').value = result.EMAIL
-                        document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
-                            document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
-                                document.querySelector('#NUMERO').value = result.NUMERO
-                                document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
-                                document.querySelector('#BAIRRO').value = result.BAIRRO
-                                document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
-                                document.querySelector('#UF').value = result.UF
+                        document.querySelector('#DDD').value = result.DDD
+                        document.querySelector('#TELEFONE').value = result.TELEFONE
+                        document.querySelector('#EMAIL').value = result.EMAIL
+                            document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
+                                document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
+                                    document.querySelector('#NUMERO').value = result.NUMERO
+                                    document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
+                                    document.querySelector('#BAIRRO').value = result.BAIRRO
+                                    document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
+                                    document.querySelector('#UF').value = result.UF
+
+                // console.log(result)
                 }
         }
 
