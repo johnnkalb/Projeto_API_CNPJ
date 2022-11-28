@@ -18,7 +18,8 @@ function deuErro (){
 const showData = (result)=>{
     if(result.error){
             console.log(result)
-            document.querySelector('#RAZAOSOCIAL').value = result.error
+            alert(result.error)
+            // document.querySelector('#RAZAOSOCIAL').value = result.error
     }
         else{
                 document.querySelector('#CNPJ').value = result.CNPJ 
@@ -71,7 +72,8 @@ cnpj.addEventListener('blur', (e)=>{
     //   .then(response => console.table(response))
       .then(response => showData(response))
       
-      .catch(err => alert(err, 'Erro de Conexão, ou Limite de Requisições Excedido')), document.querySelector(".formulario").reset()})
+      .catch(err => alert(`${err}
+(Erro de Conexão, ou Limite de Requisições Excedido)`)), document.querySelector(".formulario").reset()})
         
      //EXECUTA
 
