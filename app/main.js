@@ -35,7 +35,7 @@ const showData = (result)=>{
                                     document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                     document.querySelector('#UF').value = result.UF
 
-                
+                // input.formatarCPNJ()
                 console.log(result.CNPJ)
                 }
         }
