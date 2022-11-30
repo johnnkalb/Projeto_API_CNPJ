@@ -36,7 +36,6 @@ const showData = (result)=>{
                                     document.querySelector('#UF').value = result.UF
 
                 
-                const mask = () => document.querySelector('#CNPJ').value = replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5") 
                 console.log(result.CNPJ)
                 }
         }
