@@ -40,7 +40,7 @@ const showData = (result)=>{
                 }
         }
 
-        const exibeSalva =()=>{var botao = document.querySelector('#botaoSalvar');botao.style.display ='inline-block'}
+        const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
 
         // document.getElementById('botaoExibir')
         //     .addEventListener('click', exibeSalva)

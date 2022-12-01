@@ -61,7 +61,7 @@ const prevent = (event) =>{
  const saveCliente = () =>{
     if(isValidConsulta()){
         const cliente = {
-            // ANOME: document.querySelector('').value,
+            ANOME: document.querySelector('#NOMEDEPESQUISA').value,
             CNPJ: document.querySelector('#CNPJ').value,
             NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
             RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
