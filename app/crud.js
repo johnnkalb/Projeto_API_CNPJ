@@ -49,10 +49,7 @@ const createConsulta = (consulta) =>{
 //     return document.getElementById('CNPJ') >= 18;
 //  }
 const isValidConsulta = () =>{
-    return document.getElementById('NOMEFANTASIA')&document.getElementById('CNPJ').reportValidity()
-}
-function stopDefAction(evt) {
-    evt.preventDefault();
+    return document.getElementById('CNPJ').reportValidity()
 }
 
 
@@ -89,6 +86,10 @@ function stopDefAction(evt) {
 
 // ----------------------
 
+    document.getElementById('botaoExibir')
+        .addEventListener('click', )
 
     document.getElementById('botaoSalvar')
-    .addEventListener('click', saveCliente, stopDefAction).preventDefault()
+    .addEventListener('click', saveCliente, function(event){
+        event.preventDefault()
+    })
