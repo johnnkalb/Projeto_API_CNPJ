@@ -1,3 +1,4 @@
+const cnpj_box = document.getElementById('CNPJ')
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_CNPJ')) ?? [] // Lê as Informações do LocalStorage, Transforma em JSON, e Armazena na Constante db_CNPJ, Caso Não Exista Cria um Array Vazio ( ??[] )
 
@@ -49,12 +50,13 @@ const createConsulta = (consulta) =>{
 //     return document.getElementById('CNPJ') >= 18;
 //  }
 const isValidConsulta = () =>{
-    return document.getElementById('CNPJ').reportValidity()
+    return cnpj_box.reportValidity() 
 }
 
 const prevent = (event) =>{
     event.preventDefault()
 }
+
 
  const saveCliente = () =>{
     if(isValidConsulta()){
@@ -84,13 +86,20 @@ const prevent = (event) =>{
         createConsulta(cliente)
         // location.reload()
         // console.log('TESTANDO CAMPO CADASTRO')
+    }else{
+        console.log('DEU ERRO')
     }
+}
+
+const exibeSalva =()=>{
+   var botao = document.querySelector('#botaoSalvar');
+    botao.style.display ='inline-block'
 }
 
 // ----------------------
 
     document.getElementById('botaoExibir')
-        .addEventListener('click', prevent)
+        .addEventListener('click', exibeSalva)
 
     document.getElementById('botaoSalvar')
     .addEventListener('click', saveCliente)
