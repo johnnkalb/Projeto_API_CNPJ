@@ -60,3 +60,7 @@ footer{
     margin: 1em;
     font-style: italic;
 }
+
+#botaoSalvar{
+    display: none;
+}

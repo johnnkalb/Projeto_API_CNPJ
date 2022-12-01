@@ -37,7 +37,7 @@ const showData = (result)=>{
                                     document.querySelector('#UF').value = result.UF
 
                 // input.formatarCPNJ()
-                console.log(result.CNPJ)
+                // console.log(result.CNPJ)
                 }
         }
 
@@ -47,7 +47,7 @@ const showData = (result)=>{
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
 exibir.addEventListener('click', (e)=>{
     let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
-   
+    e.preventDefault()
 
  
     let headers = new Headers();
@@ -73,6 +73,8 @@ exibir.addEventListener('click', (e)=>{
       .catch(err => alert(`${err}
 (ERRO)`)), document.querySelector(".formulario").reset()})
         
+
+
      //EXECUTA
 
 // function (showData){
