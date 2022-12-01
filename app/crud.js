@@ -55,7 +55,8 @@ const prevent = (event) =>{
  const saveCliente = () =>{
     if(isValidConsulta()){
         const cliente = {
-            ANOME: document.querySelector('#NOMEDEPESQUISA').value,
+            
+            A_NOME_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
             CNPJ: document.querySelector('#CNPJ').value,
             NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
             RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
@@ -85,10 +86,17 @@ const prevent = (event) =>{
 }
 
 
+const abreModal = (e) =>{
+    var botao = document.querySelector('.modal');
+    botao.style.display ='inline-block'
+    e.preventDefault()
+}
 
 // ----------------------
 
   
+    document.getElementById('botaoAbreModal')
+        .addEventListener('click', abreModal)
 
     document.getElementById('botaoSalvar')
     .addEventListener('click', saveCliente)
