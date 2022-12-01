@@ -49,9 +49,8 @@ const createConsulta = (consulta) =>{
 //     return document.getElementById('CNPJ') >= 18;
 //  }
 const isValidConsulta = () =>{
-    document.querySelector
+    return document.getElementById('CNPJ').reportValidity()
 }
-
  const saveCliente = () =>{
     if(isValidConsulta()){
         const cliente = {
