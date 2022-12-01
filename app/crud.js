@@ -91,15 +91,11 @@ const prevent = (event) =>{
     }
 }
 
-const exibeSalva =()=>{
-   var botao = document.querySelector('#botaoSalvar');
-    botao.style.display ='inline-block'
-}
+
 
 // ----------------------
 
-    document.getElementById('botaoExibir')
-        .addEventListener('click', exibeSalva)
+  
 
     document.getElementById('botaoSalvar')
     .addEventListener('click', saveCliente)

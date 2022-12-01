@@ -16,7 +16,6 @@ const showData = (result)=>{
             // document.querySelector('#RAZAOSOCIAL').value = result.error
     }
         else{
-            
                 document.querySelector('#CNPJ').value = result.CNPJ
                 document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
                 document.querySelector('#SITUACAO').value = result.STATUS
@@ -41,37 +40,50 @@ const showData = (result)=>{
                 }
         }
 
+        const exibeSalva =()=>{var botao = document.querySelector('#botaoSalvar');botao.style.display ='inline-block'}
 
-
-
-// const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
-exibir.addEventListener('click', (e)=>{
-    let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
-    e.preventDefault()
-
- 
-    let headers = new Headers();
-    headers.append("Accept", "*/*");
-    headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
-    headers.append('Origin','http://127.0.0.1:5500');
-
-    const options = 
-    {
-        method: 'GET', 
-        headers: headers,
-    };
-
+        // document.getElementById('botaoExibir')
+        //     .addEventListener('click', exibeSalva)
         
 
-    // https://receitaws.com.br/v1/cnpj/
-    // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
-    fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
-      .then(response => response.json())
-    //   .then(response => console.table(response))
-      .then(response => showData(response))
-      
-      .catch(err => alert(`${err}
-(ERRO)`)), document.querySelector(".formulario").reset()})
+// const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
+    exibir.addEventListener('click', (e)=>{
+
+        if(document.querySelector('#CNPJ').value == ''){
+            alert('NENHUM CPF DIGITADO!')
+        }
+        else{
+           
+            exibeSalva()
+
+            let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
+        e.preventDefault()
+
+    
+        let headers = new Headers();
+        headers.append("Accept", "*/*");
+        headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
+        headers.append('Origin','http://127.0.0.1:5500');
+
+        const options = 
+        {
+            method: 'GET', 
+            headers: headers,
+        };
+
+            
+
+        // https://receitaws.com.br/v1/cnpj/
+        // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
+        fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
+        .then(response => response.json())
+        //   .then(response => console.table(response))
+        .then(response => showData(response))
+        
+        .catch(err => alert(`${err}
+    (ERRO)`)), document.querySelector(".formulario").reset()
+        }
+    })
         
 
 
