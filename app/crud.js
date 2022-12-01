@@ -38,17 +38,11 @@ const readConsulta = () => getLocalStorage()
 
 // CREATE
 const createConsulta = (consulta) =>{
-    const dbCNPJ = getLocalStorage()
-    // console.log(dbCNPJ)
-    dbCNPJ.push (consulta) // Ele Adiciona as Informações do consulta dentro da Array
-    setLocalStorage(dbCNPJ)
-    // console.log(localStorage.getItem)
-}
+        const dbCNPJ = getLocalStorage()
+        dbCNPJ.push (consulta) // Ele Adiciona as Informações do consulta dentro da Array
+        setLocalStorage(dbCNPJ)
+    }
 
-// VALIDA OS CAMPOS
-// const isValidFileds = () =>{
-//     return document.getElementById('CNPJ') >= 18;
-//  }
 const isValidConsulta = () =>{
     return cnpj_box.reportValidity() 
 }
@@ -85,8 +79,6 @@ const prevent = (event) =>{
                         UF: document.querySelector('#UF').value,
         }
         createConsulta(cliente)
-        // location.reload()
-        // console.log('TESTANDO CAMPO CADASTRO')
     }else{
         console.log('DEU ERRO')
     }
