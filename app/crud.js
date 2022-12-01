@@ -86,4 +86,4 @@ const isValidConsulta = () =>{
 
 
     document.getElementById('botaoSalvar')
-    .addEventListener('click', saveCliente)
+    .addEventListener('click', saveCliente).preventDefault()
