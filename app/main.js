@@ -83,6 +83,7 @@ const showData = (result)=>{
         .catch(err => alert(`${err}
     (ERRO)`)), document.querySelector(".formulario").reset()
         }
+        
     })
         
 
