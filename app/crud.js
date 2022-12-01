@@ -52,6 +52,9 @@ const isValidConsulta = () =>{
     return document.getElementById('CNPJ').reportValidity()
 }
 
+const prevent = (event) =>{
+    event.preventDefault()
+}
 
  const saveCliente = () =>{
     if(isValidConsulta()){
@@ -87,9 +90,7 @@ const isValidConsulta = () =>{
 // ----------------------
 
     document.getElementById('botaoExibir')
-        .addEventListener('click', )
+        .addEventListener('click', prevent)
 
     document.getElementById('botaoSalvar')
-    .addEventListener('click', saveCliente, function(event){
-        event.preventDefault()
-    })
+    .addEventListener('click', saveCliente)
