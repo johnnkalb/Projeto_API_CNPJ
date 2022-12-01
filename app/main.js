@@ -1,4 +1,5 @@
 const cnpj = document.querySelector('#CNPJ')
+const exibir = document.querySelector('#botaoExibir')
 const errorSpan = document.querySelector('#errorSpan')
 const form = document.querySelector('.flexbox-1')
 const formulario = document.querySelector('container-form')
@@ -44,7 +45,7 @@ const showData = (result)=>{
 
 
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
-cnpj.addEventListener('blur', (e)=>{
+exibir.addEventListener('click', (e)=>{
     let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
    
 
