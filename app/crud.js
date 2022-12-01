@@ -48,10 +48,12 @@ const createConsulta = (consulta) =>{
 // const isValidFileds = () =>{
 //     return document.getElementById('CNPJ') >= 18;
 //  }
-
+const isValidConsulta = () =>{
+    document.querySelector
+}
 
  const saveCliente = () =>{
-    if(){
+    if(isValidConsulta()){
         const cliente = {
             CNPJ: document.querySelector('#CNPJ').value,
             NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
