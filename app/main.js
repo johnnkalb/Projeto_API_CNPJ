@@ -35,16 +35,12 @@ const showData = (result)=>{
                                     document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                     document.querySelector('#UF').value = result.UF
 
-                // input.formatarCPNJ()
-                // console.log(result.CNPJ)
                 }
         }
 
         const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
 
-        // document.getElementById('botaoExibir')
-        //     .addEventListener('click', exibeSalva)
-        
+     
 
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
     exibir.addEventListener('click', (e)=>{
@@ -86,39 +82,3 @@ const showData = (result)=>{
         
     })
         
-
-
-     //EXECUTA
-
-// function (showData){
-//     inserirDados.innerHtml = 
-//     `
-//     <div class="container__itens">
-//     <label for="porte" class="subtitulo--resultado">Porte</label>
-//     <input type="text" id="porte" class="form-control">
-//     </div>
-//     `
-// }
-
-
-// function exibirDados(result){
-//             //Limpa
-    
-//                 if(result.error){
-//                         console.log(result)
-//                 }
-//                     else{
-//                             console.table(result)
-//                             // console.table(result)
-//                     }
-//                 }
-
-
-
-
-// for(const campo in result){
-//     if(document.querySelector("#"+campo))
-//     document.querySelector("#"+campo).value = result[campo]
-//     // console.log(campo)
-//     console.log(campo)
-// }
