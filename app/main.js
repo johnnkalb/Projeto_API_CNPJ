@@ -57,7 +57,8 @@ const inserirDados = document.querySelector('.ola')
                                         document.querySelector('#BAIRRO').value = result.BAIRRO
                                         document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                         document.querySelector('#UF').value = result.UF
-
+                    
+                    // inputModf()
                     exibeSalva()
                     deuCerto()
                     }

@@ -1,6 +1,7 @@
 // Cria Máscara somente para números
 const input = document.getElementById("CNPJ");
 
+
 input.addEventListener("keypress", somenteNumeros);
 
 function somenteNumeros(e) {
@@ -27,5 +28,6 @@ e.preventDefault();
 
 }
 
-
+const inputModf =()=>{formatarCNPJ(showData())
+}
 
