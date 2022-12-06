@@ -54,32 +54,39 @@ const prevent = (event) =>{
 
  const saveCliente = () =>{
     if(isValidConsulta()){
-        const cliente = {
+        if(document.querySelector('#NOMEDEPESQUISA').value == 0){
+                // alert('insira um Nome')
+                document.getElementById('botaoSalvar').prevent()
+        }else{
+            const cliente = {
             
-            A_NOME_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
-            CNPJ: document.querySelector('#CNPJ').value,
-            NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
-            RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
-            STATUS: document.querySelector('#SITUACAO').value,
-            CNAE_PRINCIPAL_DESCRICAO: document.querySelector('#CNAEDESC').value,
-
-                CNAE_PRINCIPAL_CODIGO: document.querySelector('#CNAECOD').value,
-                CEP: document.querySelector('#CEP'),
-                DATA_ABERTURA: document.querySelector('#ABERTURA').value,
-                DDD: document.querySelector('#DDD').value,
-
-                    TELEFONE: document.querySelector('#TELEFONE').value,
-                    EMAIL:document.querySelector('#EMAIL').value,
-                    TIPO_LOGRADOURO: document.querySelector('#TIPOLOGRADOURO').value,
-                    LOGRADOURO: document.querySelector('#LOGRADOURO').value,
-                    NUMERO: document.querySelector('#NUMERO').value,
-
-                        COMPLEMENTO: document.querySelector('#COMPLEMENTO').value,
-                        BAIRRO: document.querySelector('#BAIRRO').value,
-                        MUNICIPIO: document.querySelector('#MUNICIPIO').value,
-                        UF: document.querySelector('#UF').value,
+                A_NOME_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
+                CNPJ: document.querySelector('#CNPJ').value,
+                NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
+                RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
+                STATUS: document.querySelector('#SITUACAO').value,
+                CNAE_PRINCIPAL_DESCRICAO: document.querySelector('#CNAEDESC').value,
+    
+                    CNAE_PRINCIPAL_CODIGO: document.querySelector('#CNAECOD').value,
+                    CEP: document.querySelector('#CEP'),
+                    DATA_ABERTURA: document.querySelector('#ABERTURA').value,
+                    DDD: document.querySelector('#DDD').value,
+    
+                        TELEFONE: document.querySelector('#TELEFONE').value,
+                        EMAIL:document.querySelector('#EMAIL').value,
+                        TIPO_LOGRADOURO: document.querySelector('#TIPOLOGRADOURO').value,
+                        LOGRADOURO: document.querySelector('#LOGRADOURO').value,
+                        NUMERO: document.querySelector('#NUMERO').value,
+    
+                            COMPLEMENTO: document.querySelector('#COMPLEMENTO').value,
+                            BAIRRO: document.querySelector('#BAIRRO').value,
+                            MUNICIPIO: document.querySelector('#MUNICIPIO').value,
+                            UF: document.querySelector('#UF').value,
+            }
+            createConsulta(cliente)
+            location.reload()
         }
-        createConsulta(cliente)
+
     }else{
         console.log('DEU ERRO')
     }
