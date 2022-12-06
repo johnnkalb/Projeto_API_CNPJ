@@ -97,7 +97,17 @@ footer{
     background: #0c0c97;
     cursor: pointer;
 }
+
+
+/* SESSÂO DE ERRO NA INPUT VAZIA */
 #error{
     margin: 0.2em;
     color: red;
 }
+.input--error{
+    border: 1.5px solid;
+    color: red;
+}
+/*  */
+
+/* EXITO NA CONSULTA DA INPUT */
