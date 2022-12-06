@@ -103,11 +103,24 @@ footer{
 #error{
     margin: 0.2em;
     color: red;
+    display: none;
 }
 .input--error{
     border: 1.5px solid;
     color: red;
 }
-/*  */
+.span--error{
+    font-size: 1.3em;
+    position: absolute;
+    margin: 0.1em -1.4em;
+    background: red;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 100%;
+    display: none;
+}
+        /*  */
 
 /* EXITO NA CONSULTA DA INPUT */
+
+/*  */

@@ -39,14 +39,22 @@ const showData = (result)=>{
         }
 
         const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
+        
+        const deuErro = () =>{
+            var errorSpan1 = document.querySelector('.span--error');
+            var errorSpan2 = document.getElementById('error');
 
+            errorSpan1.style.display = 'inline';
+            errorSpan2.style.display = 'block'; 
+        }
      
 
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
     exibir.addEventListener('click', (e)=>{
 
         if(document.querySelector('#CNPJ').value == ''){
-            alert('NENHUM CNPJ DIGITADO!')
+            // alert('NENHUM CNPJ DIGITADO!')
+            deuErro()
         }
         else{
            
