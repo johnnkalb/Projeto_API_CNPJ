@@ -9,7 +9,9 @@ const inserirDados = document.querySelector('.ola')
 // ERRORS
 var errorSpan1 = document.querySelector('.span--error');
 var errorSpan2 = document.getElementById('error');
-var errorInput = document.getElementById('CNPJ');
+// var inputCNPJ = document.getElementById('CNPJ');
+// SUCESSO
+var sucessoSpan1 = document.querySelector('')
 // 
 
 
@@ -46,12 +48,13 @@ const showData = (result)=>{
         const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
 
         const deuErro = () =>{
-                errorInput.className += " input--error";
+                cnpj.className = "form-control input--error";
                 errorSpan1.style.display = 'inline';
                 errorSpan2.style.display = 'block'; }
      
         const deuCerto = () =>{
-            
+            cnpj.className = "form-control input--sucesso";
+        
         }
 
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
@@ -62,7 +65,7 @@ const showData = (result)=>{
             deuErro()
         }
         else{
-           
+           deuCerto()
             exibeSalva()
 
             let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
