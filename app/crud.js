@@ -52,15 +52,15 @@ const prevent = (event) =>{
 }
 
 
- const saveCliente = () =>{
+ const saveCliente = (e) =>{
     if(isValidConsulta()){
         if(document.querySelector('#NOMEDEPESQUISA').value == 0){
                 // alert('insira um Nome')
-                document.getElementById('botaoSalvar').prevent()
+                e.preventDefault()
         }else{
             const cliente = {
             
-                A_NOME_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
+                A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
                 CNPJ: document.querySelector('#CNPJ').value,
                 NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
                 RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
