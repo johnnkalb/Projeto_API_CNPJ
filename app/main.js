@@ -6,95 +6,104 @@ const formulario = document.querySelector('container-form')
 const erro = document.querySelector('.erro')
 const inserirDados = document.querySelector('.ola')
 
-// ERRORS
-var errorSpan1 = document.querySelector('.span--error');
-var errorSpan2 = document.getElementById('error');
-// var inputCNPJ = document.getElementById('CNPJ');
-// SUCESSO
-var sucessoSpan1 = document.querySelector('')
-// 
+    const valorCNPJ = cnpj.value;
+        // ERRORS
+        var errorSpan1 = document.querySelector('.span--error');
+        var errorSpan2 = document.getElementById('error');
+        // var inputCNPJ = document.getElementById('CNPJ');
+        // SUCESSO
+        var sucessoSpan1 = document.querySelector('.span--sucesso');
+        // 
 
+    const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
 
-
-const showData = (result)=>{
-    if(result.error){
-            console.log(result)
-            alert(result.error)
-            // document.querySelector('#RAZAOSOCIAL').value = result.error
+    const deuErro = () =>{
+        cnpj.className = "form-control input--error";
+        errorSpan1.style.display = 'inline';
+        errorSpan2.style.display = 'block'; 
+        sucessoSpan1.style.display = 'none'
+        document.getElementById('botaoAbreModal').style.display = 'none'
     }
-        else{
-                document.querySelector('#CNPJ').value = result.CNPJ
-                document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
-                document.querySelector('#SITUACAO').value = result.STATUS
-                document.querySelector('#RAZAOSOCIAL').value = result["RAZAO SOCIAL"]
-                document.querySelector('#CNAEDESC').value = result["CNAE PRINCIPAL DESCRICAO"]
-                    document.querySelector('#CNAECOD').value = result["CNAE PRINCIPAL CODIGO"]
-                    document.querySelector('#CEP').value = result.CEP
-                    document.querySelector('#ABERTURA').value = result["DATA ABERTURA"]
-                        document.querySelector('#DDD').value = result.DDD
-                        document.querySelector('#TELEFONE').value = result.TELEFONE
-                        document.querySelector('#EMAIL').value = result.EMAIL
-                            document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
-                                document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
-                                    document.querySelector('#NUMERO').value = result.NUMERO
-                                    document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
-                                    document.querySelector('#BAIRRO').value = result.BAIRRO
-                                    document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
-                                    document.querySelector('#UF').value = result.UF
 
-                }
+    const deuCerto = () =>{
+    errorSpan2.style.display = 'none'
+    cnpj.className = "form-control input--sucesso";
+    sucessoSpan1.style.display = 'inline';
+    }
+
+    const showData = (result)=>{
+        if(result.error){
+                console.log(result.error)
+                // alert(result.error)
+                deuErro()
+                // document.querySelector('#RAZAOSOCIAL').value = result.error
         }
+            else{
+                    document.querySelector('#CNPJ').value = result.CNPJ
+                    document.querySelector('#NOMEFANTASIA').value = result["NOME FANTASIA"]
+                    document.querySelector('#SITUACAO').value = result.STATUS
+                    document.querySelector('#RAZAOSOCIAL').value = result["RAZAO SOCIAL"]
+                    document.querySelector('#CNAEDESC').value = result["CNAE PRINCIPAL DESCRICAO"]
+                        document.querySelector('#CNAECOD').value = result["CNAE PRINCIPAL CODIGO"]
+                        document.querySelector('#CEP').value = result.CEP
+                        document.querySelector('#ABERTURA').value = result["DATA ABERTURA"]
+                            document.querySelector('#DDD').value = result.DDD
+                            document.querySelector('#TELEFONE').value = result.TELEFONE
+                            document.querySelector('#EMAIL').value = result.EMAIL
+                                document.querySelector('#TIPOLOGRADOURO').value = result["TIPO LOGRADOURO"]
+                                    document.querySelector('#LOGRADOURO').value = result.LOGRADOURO
+                                        document.querySelector('#NUMERO').value = result.NUMERO
+                                        document.querySelector('#COMPLEMENTO').value = result.COMPLEMENTO
+                                        document.querySelector('#BAIRRO').value = result.BAIRRO
+                                        document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
+                                        document.querySelector('#UF').value = result.UF
 
-        const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
+                    exibeSalva()
+                    deuCerto()
+                    }
+            }
 
-        const deuErro = () =>{
-                cnpj.className = "form-control input--error";
-                errorSpan1.style.display = 'inline';
-                errorSpan2.style.display = 'block'; }
-     
-        const deuCerto = () =>{
-            cnpj.className = "form-control input--sucesso";
         
-        }
 
-// const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
-    exibir.addEventListener('click', (e)=>{
 
-        if(document.querySelector('#CNPJ').value == ''){
-            // alert('NENHUM CNPJ DIGITADO!')
-            deuErro()
-        }
-        else{
-           deuCerto()
-            exibeSalva()
+    // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
+        exibir.addEventListener('click', (e)=>{
 
-            let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
-        e.preventDefault()
-
-    
-        let headers = new Headers();
-        headers.append("Accept", "*/*");
-        headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
-        headers.append('Origin','http://127.0.0.1:5500');
-
-        const options = 
-        {
-            method: 'GET', 
-            headers: headers,
-        };
-
+            if(cnpj.value == '' || valorCNPJ.length >= 14){
+                deuErro()
+            }
+            else{
             
+                // exibeSalva()
 
-        // https://receitaws.com.br/v1/cnpj/
-        // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
-        fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
-        .then(response => response.json())
-        //   .then(response => console.table(response))
-        .then(response => showData(response))
+                let search = cnpj.value.replaceAll(/[./-]/g,'') //remove os caracteres do link
+            e.preventDefault()
+
         
-        .catch(err => alert(`${err}
-    (ERRO)`)), document.querySelector(".formulario").reset()
-        }
-        
-    })
-        
+            let headers = new Headers();
+            headers.append("Accept", "*/*");
+            headers.append("User-Agent", "Thunder Client (https://www.thunderclient.com)");
+            headers.append('Origin','http://127.0.0.1:5500');
+
+            const options = 
+            {
+                method: 'GET', 
+                headers: headers,
+            };
+
+                
+
+            // https://receitaws.com.br/v1/cnpj/
+            // https://api-publica.speedio.com.br/buscarcnpj?cnpj=
+            fetch(`https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`, options)
+            .then(response => response.json())
+            //   .then(response => console.table(response))
+            .then(response => showData(response))
+            // .then(resp => exibeSalva(resp))
+            
+            .catch(err => deuErro(err)), document.querySelector(".formulario").reset()
+            
+            }
+            
+        })
+            
