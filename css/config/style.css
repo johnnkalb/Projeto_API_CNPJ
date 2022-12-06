@@ -65,7 +65,7 @@ footer{
     display: none;
 }
 .modal{
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -76,13 +76,31 @@ footer{
 .modal-form{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background: #ccc;
     /* filter: opacity(0.5); */
-    margin: 35vh;
-    padding: 5em;
+    margin: 32vh 60vh;
+    padding: 2em;
     border-radius: 10px;
     border: 1px solid;
-    box-shadow: 5px 0px;
+    box-shadow: 32px 50px 70px 100vh #000000ba;
+}
+.modal__sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalBtn{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+#botaoSalvar{
+    width: 30%;
+    padding: 0.5em;
+}
+#NOMEDEPESQUISA{
+    padding: 0.7em 15em 0.7em 0.4em;
 }
 .botao__consulta{
     background: blue;
@@ -104,6 +122,7 @@ footer{
     margin: 0.2em;
     color: red;
     display: none;
+    font-size: 13px;
 }
 .input--error{
     border: 2px solid;
