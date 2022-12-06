@@ -28,6 +28,3 @@ e.preventDefault();
 
 }
 
-const inputModf =()=>{formatarCNPJ(showData())
-}
-
