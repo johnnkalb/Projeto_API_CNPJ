@@ -6,6 +6,11 @@ const formulario = document.querySelector('container-form')
 const erro = document.querySelector('.erro')
 const inserirDados = document.querySelector('.ola')
 
+// ERRORS
+var errorSpan1 = document.querySelector('.span--error');
+var errorSpan2 = document.getElementById('error');
+var errorInput = document.getElementById('CNPJ');
+// 
 
 
 
@@ -39,15 +44,15 @@ const showData = (result)=>{
         }
 
         const exibeSalva =()=>{var botao = document.querySelector('#botaoAbreModal');botao.style.display ='inline-block'}
-        
-        const deuErro = () =>{
-            var errorSpan1 = document.querySelector('.span--error');
-            var errorSpan2 = document.getElementById('error');
 
-            errorSpan1.style.display = 'inline';
-            errorSpan2.style.display = 'block'; 
-        }
+        const deuErro = () =>{
+                errorInput.className += " input--error";
+                errorSpan1.style.display = 'inline';
+                errorSpan2.style.display = 'block'; }
      
+        const deuCerto = () =>{
+            
+        }
 
 // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
     exibir.addEventListener('click', (e)=>{
