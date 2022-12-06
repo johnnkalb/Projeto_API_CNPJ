@@ -97,3 +97,7 @@ footer{
     background: #0c0c97;
     cursor: pointer;
 }
+#error{
+    margin: 0.2em;
+    color: red;
+}
