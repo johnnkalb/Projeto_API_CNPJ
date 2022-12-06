@@ -46,7 +46,7 @@ const showData = (result)=>{
     exibir.addEventListener('click', (e)=>{
 
         if(document.querySelector('#CNPJ').value == ''){
-            alert('NENHUM CPF DIGITADO!')
+            alert('NENHUM CNPJ DIGITADO!')
         }
         else{
            

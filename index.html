@@ -16,10 +16,11 @@
           <!--//////////////////////////////////-->
     <section class="container__formulario">
         <form class="formulario container-form">
-            <button id="botaoExibir">Consultar</button>
-            <button id="botaoAbreModal">SALVAR!</button>
+            <button id="botaoExibir" class="botao__consulta">Consultar</button>
+            <button id="botaoAbreModal" class="botao__consulta">Salvar Pesquisa</button>
             
             <div class="modal">
+                <span>&#10005;</span>
                 <div class="modal-form">
                     <input type="text" placeholder="Nome Da Consulta" id="NOMEDEPESQUISA">
                     <button id="botaoSalvar">Salvar</button>
@@ -156,6 +157,7 @@
     <script src="./app/main.js"></script>
     <script src="./app/mascara.js"></script>
     <script src="./app/crud.js"></script>
+    <script src="./app/modal.js"></script>
     
 </body>
 </html>
