@@ -40,7 +40,7 @@ header:hover{
 .flexbox-geral{
     border: 1px solid;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px;
+    box-shadow: 6px 5px 14px;
 }
 .form-control{
     color: rgb(45, 19, 161);
@@ -110,6 +110,18 @@ footer{
     padding: 0.5em 1em;
     margin: 0.5em 0;
     border-radius: 3px;
+}
+.botao__consulta--salvar{
+    background: green;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    border-radius: 3px;
+}
+.botao__consulta--salvar:hover{
+    background:#115f14 ;
 }
 .botao__consulta:hover{
     background: #0c0c97;
