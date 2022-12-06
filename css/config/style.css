@@ -109,6 +109,9 @@ footer{
     border: 2px solid;
     color: red;
 }
+.input--sucesso{
+    border: 2px solid green;
+}
 .span--error{
     font-size: 1.3em;
     position: absolute;
@@ -119,6 +122,17 @@ footer{
     border-radius: 100%;
     display: none;
 }
+.span--sucesso{
+    font-size: 1.3em;
+    position: absolute;
+    margin: 0.1em -1.5em;
+    background: #4caf50;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 100%;
+    display: none;
+}
+
         /*  */
 
 /* EXITO NA CONSULTA DA INPUT */
