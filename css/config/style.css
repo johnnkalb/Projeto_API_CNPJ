@@ -80,4 +80,7 @@ footer{
     /* filter: opacity(0.5); */
     margin: 35vh;
     padding: 5em;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 5px 0px;
 }
