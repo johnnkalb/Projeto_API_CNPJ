@@ -4,6 +4,8 @@
 }
 .tabela{
     border:1px solid black;
+    background: #ccc;
+    font-weight: 600;
 
 }
 .container__tabela{
@@ -19,4 +21,5 @@
 .tabela__itemConsulta{
     border: 1px solid black;
     text-align: center;
+    padding: 0.2em;
 }
