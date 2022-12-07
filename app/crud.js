@@ -118,5 +118,8 @@ const abreModal = (e) =>{
     document.getElementById('botaoAbreModal')
         .addEventListener('click', abreModal)
 
+    document,getElementById('botaoLer')
+        .addEventListener('click', abreModalExibe)
+
     document.getElementById('botaoSalvar')
     .addEventListener('click', saveCliente)
