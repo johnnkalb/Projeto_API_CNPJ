@@ -1,4 +1,4 @@
-const switchModal = () => {
+const switchModalExibe = () => {
     const modalExibe = document.querySelector('.modal_exibe')
     const actualStyle = modalExibe.style.display
     if(actualStyle == 'block') {
@@ -9,12 +9,12 @@ const switchModal = () => {
       erro.style.display = 'none';
     }
     else {
-      modal.style.display = 'block'
+      modalExibe.style.display = 'block'
     }
   }
   
   const btn = document.querySelector('.modalBtn_exibe')
-  btn.addEventListener('click', switchModal);
+  btn.addEventListener('click', switchModalExibe);
   
   window.onclick = function(event) {
       var modalExibe = document.querySelector('.modal_exibe')
