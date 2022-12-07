@@ -1,7 +1,7 @@
 const switchModalExibe = () => {
     const modalExibe = document.querySelector('.modal_exibe')
-    const actualStyle = modalExibe.style.display
-    if(actualStyle == 'block') {
+    const actualStyleExibe = modalExibe.style.display
+    if(actualStyleExibe == 'block') {
       modalExibe.style.display = 'none'
       
       form.reset();
@@ -13,8 +13,8 @@ const switchModalExibe = () => {
     }
   }
   
-  const btn = document.querySelector('.modalBtn_exibe')
-  btn.addEventListener('click', switchModalExibe);
+  const btn_exibe = document.querySelector('.modalBtn_exibe')
+  btn_exibe.addEventListener('click', switchModalExibe);
   
   window.onclick = function(event) {
       var modalExibe = document.querySelector('.modal_exibe')
