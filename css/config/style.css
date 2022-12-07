@@ -20,7 +20,9 @@ header:hover{
     cursor: pointer;
 }
 
-
+.formulario{
+    width: 70%;
+}
 .container__formulario{
     display: flex;
     justify-content: center;
