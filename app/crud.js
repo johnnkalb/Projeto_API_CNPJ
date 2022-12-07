@@ -50,17 +50,15 @@ const isValidConsulta = () =>{
 const prevent = (event) =>{
     event.preventDefault()
 }
-
+const arr = JSON.parse(localStorage.getItem('db_CNPJ'));
 
  const saveCliente = (e) =>{
     if(isValidConsulta()){
-        if(document.querySelector('#NOMEDEPESQUISA').value == 0){
-                // alert('insira um Nome')
-                e.preventDefault()
+        if(arr != null){
+            console.log('A')
         }else{
             const cliente = {
-            
-                A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
+                // A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
                 CNPJ: document.querySelector('#CNPJ').value,
                 NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
                 RAZAO_SOCIAL: document.querySelector('#RAZAOSOCIAL').value,
@@ -85,12 +83,9 @@ const prevent = (event) =>{
             }
             createConsulta(cliente)
             location.reload()
-        }
-
-    }else{
-        console.log('DEU ERRO')
+        } 
     }
-}
+    }
 
 
 const abreModal = (e) =>{
