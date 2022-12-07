@@ -13,7 +13,7 @@
     flex-direction: column;
     background: #ccc;
     /* filter: opacity(0.5); */
-    margin: 32vh 60vh;
+    margin: 5vh 5vh;
     padding: 2em;
     border-radius: 10px;
     border: 1px solid;
@@ -44,4 +44,9 @@
     padding: 0.5em 1em;
     margin: 0.5em 0;
     border-radius: 3px;
+}
+.titulo_exibe{
+    
+    font-size: 1.5em;
+
 }

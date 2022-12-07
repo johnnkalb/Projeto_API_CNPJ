@@ -1,6 +1,7 @@
 @import url(../header.css);
 @import url(../footer.css);
 @import url(../config/modal_exibe.css);
+@import url(../tabelaExibe.css);
 
 :root{
     --fonte-padrao: sans-serif;
