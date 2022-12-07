@@ -1,8 +1,15 @@
 const switchModalExibe = () => {
     const modalExibe = document.querySelector('.modal_exibe')
+    var formCons = document.querySelector('.flexbox-geral')
+    var botaoCons = document.getElementById('botaoExibir')
+
     const actualStyleExibe = modalExibe.style.display
+
     if(actualStyleExibe == 'block') {
       modalExibe.style.display = 'none'
+      formCons.style.display = 'block'
+    //   botaoCons.style.display ='block'
+      
       
     //   form.reset();
     //   cadastrado.style.display = 'none';
@@ -10,6 +17,8 @@ const switchModalExibe = () => {
     }
     else {
       modalExibe.style.display = 'block'
+      formCons.style.display = 'none'
+    //   botaoCons.style.display = 'none'
     }
   }
   
