@@ -131,11 +131,11 @@ const abreModal = (e) =>{
         var formCons = document.querySelector('.flexbox-geral')
         formCons.style.display = 'none'
         botaoExibe.style.display = 'block';
-
+        // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
         e.preventDefault()
-      
+       
     }
 
 // ----------------------
