@@ -86,25 +86,25 @@ const prevent = (event) =>{
     }
     // }
 
-    const createRow = (cliente) =>{
-        const newRow = document.createElement('tr')
-        newRow.innerHTML = `
-        <td>${cliente.nome}</td>
-        <td>${cliente.email}</td>
-        <td>${cliente.telefone}</td>
-        <td>${cliente.cidade}</td>
-        <td>
-            <button type="button" class="button green">editar</button>
-            <button type="button" class="button red">excluir</button>
-        </td>
-        `
-        document.querySelector('#tableCliente>tbody').appendChild(newRow)
-    }
-    
-    const updadeTable = () =>{
-        const dbCliente = readCliente()
-        dbCliente.forEach(createRow)
-    }
+    // const createRow = (cliente) =>{
+    //     const newRow = document.createElement('tr')
+    //     newRow.innerHTML = `
+    //     <td>${cliente.nome}</td>
+    //     <td>${cliente.email}</td>
+    //     <td>${cliente.telefone}</td>
+    //     <td>${cliente.cidade}</td>
+    //     <td>
+    //         <button type="button" class="button green">editar</button>
+    //         <button type="button" class="button red">excluir</button>
+    //     </td>
+    //     `
+    //     document.querySelector('#tableCliente>tbody').appendChild(newRow)
+    // }
+
+    // const updadeTable = () =>{
+    //     const dbCliente = readCliente()
+    //     dbCliente.forEach(createRow)
+    // }
 
 const abreModal = (e) =>{
     var botao = document.querySelector('.modal');
