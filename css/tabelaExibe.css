@@ -1,3 +1,14 @@
 .tabela_cabecalho{
     border:1px solid black;
+    padding: 0.5em;
+}
+.tabela{
+    border:1px solid black;
+
+}
+.container__tabela{
+    height: 450px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 0em 1.5em 0 0;
 }
