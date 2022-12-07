@@ -19,7 +19,7 @@ const switchModalExibe = () => {
   window.onclick = function(event) {
       var modalExibe = document.querySelector('.modal_exibe')
     if (event.target == modalExibe) {
-      switchModal();
+      switchModalExibe();
       form.reset();
     }
   }

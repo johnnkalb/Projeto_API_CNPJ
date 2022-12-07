@@ -113,7 +113,8 @@ const abreModal = (e) =>{
 }
 const abreModalExibe = (e) =>{
     var botaoExibe = document.querySelector('.modal_exibe');
-    botaoExibe.style.display = 'inline-block';
+    botaoExibe.style.display = 'block';
+    // console.log()
     e.preventDefault()
 }
 
@@ -123,7 +124,7 @@ const abreModalExibe = (e) =>{
     document.getElementById('botaoAbreModal')
         .addEventListener('click', abreModal)
 
-    document,getElementById('botaoLer')
+    document.getElementById('botaoLer')
         .addEventListener('click', abreModalExibe)
 
     document.getElementById('botaoSalvar')
