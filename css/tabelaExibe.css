@@ -12,3 +12,11 @@
     white-space: nowrap;
     width: 90%;
 }
+#tableConsulta{
+    margin: 1em 0em;
+    border: 1px solid black;
+}
+.tabela__itemConsulta{
+    border: 1px solid black;
+    text-align: center;
+}
