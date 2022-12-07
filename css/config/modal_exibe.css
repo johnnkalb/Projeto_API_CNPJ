@@ -1,23 +1,23 @@
-.modal_exibe{
-    display: none;
-    position: fixed;
+/* .modal_exibe{ */
+    /* display: none; */
+    /* position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-}
+} */
 .modal-form_exibe{
     display: flex;
     justify-content: center;
     flex-direction: column;
     background: #ccc;
     /* filter: opacity(0.5); */
-    margin: 5vh 5vh;
-    padding: 2em;
+    margin: 0vh 0vh;
+    /* padding: 2em; */
     border-radius: 10px;
     border: 1px solid;
-    box-shadow: 32px 50px 70px 100vh #000000ba;
+    /* box-shadow: 32px 50px 70px 100vh #000000ba; */
 }
 .modal__sub_exibe{
     display: flex;
