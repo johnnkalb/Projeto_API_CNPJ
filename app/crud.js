@@ -92,17 +92,17 @@ const prevent = (event) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
         <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
-        <td class="tabela__itemConsulta">${cliente["NOME FANTASIA"]}</td>
-        <td class="tabela__itemConsulta">${cliente["RAZAO SOCIAL"]}</td>
+        <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
+        <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
         <td class="tabela__itemConsulta">${cliente.STATUS}</td>
-        <td class="tabela__itemConsulta">${cliente["CNAE PRINCIPAL DESCRICAO"]}</td>
-        <td class="tabela__itemConsulta">${cliente["CNAE PRINCIPAL CODIGO"]}</td>
+        <td class="tabela__itemConsulta">${cliente.CNAE_PRINCIPAL_DESCRICAO}</td>
+        <td class="tabela__itemConsulta">${cliente.CNAE_PRINCIPAL_CODIGO}</td>
         <td class="tabela__itemConsulta">${cliente.CEP}</td>
-        <td class="tabela__itemConsulta">${cliente["DATA ABERTURA"]}</td>
+        <td class="tabela__itemConsulta">${cliente.DATA_ABERTURA}</td>
         <td class="tabela__itemConsulta">${cliente.DDD}</td>
         <td class="tabela__itemConsulta">${cliente.TELEFONE}</td>
         <td class="tabela__itemConsulta">${cliente.EMAIL}</td>
-        <td class="tabela__itemConsulta">${cliente["TIPO LOGRADOURO"]}</td>
+        <td class="tabela__itemConsulta">${cliente.TIPO_LOGRADOURO}</td>
         <td class="tabela__itemConsulta">${cliente.LOGRADOURO}</td>
         <td class="tabela__itemConsulta">${cliente.NUMERO}</td>
         <td class="tabela__itemConsulta">${cliente.COMPLEMENTO}</td>
@@ -128,8 +128,8 @@ const abreModal = (e) =>{
     
     const abreModalExibe = (e) =>{
         var botaoExibe = document.querySelector('.modal_exibe');
-        var formCons = document.querySelector('.flexbox-geral')
-        formCons.style.display = 'none'
+        
+       
         botaoExibe.style.display = 'block';
         // RESOLVER O PROBLEMA DAQUI
         
