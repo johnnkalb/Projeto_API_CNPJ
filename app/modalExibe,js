@@ -4,9 +4,9 @@ const switchModalExibe = () => {
     if(actualStyleExibe == 'block') {
       modalExibe.style.display = 'none'
       
-      form.reset();
-      cadastrado.style.display = 'none';
-      erro.style.display = 'none';
+    //   form.reset();
+    //   cadastrado.style.display = 'none';
+    //   erro.style.display = 'none';
     }
     else {
       modalExibe.style.display = 'block'

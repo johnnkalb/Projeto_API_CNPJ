@@ -111,6 +111,11 @@ const abreModal = (e) =>{
     botao.style.display ='inline-block'
     e.preventDefault()
 }
+const abreModalExibe = (e) =>{
+    var botao = document.querySelector('.modal_exibe');
+    botao.style.display = 'inline-block';
+    e.preventDefault()
+}
 
 // ----------------------
 
