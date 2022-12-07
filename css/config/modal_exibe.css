@@ -1,12 +1,12 @@
-/* .modal_exibe{ */
-    /* display: none; */
+.modal_exibe{
+    display: none;
     /* position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-} */
+     height: 100%; */
+}
 .modal-form_exibe{
     display: flex;
     /* display: none; */

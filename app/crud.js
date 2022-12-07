@@ -80,43 +80,63 @@ const prevent = (event) =>{
                             MUNICIPIO: document.querySelector('#MUNICIPIO').value,
                             UF: document.querySelector('#UF').value,
             }
+            
             createConsulta(cliente)
+            updadeTable()
             location.reload()
         } 
     }
     // }
 
-    // const createRow = (cliente) =>{
-    //     const newRow = document.createElement('tr')
-    //     newRow.innerHTML = `
-    //     <td>${cliente.nome}</td>
-    //     <td>${cliente.email}</td>
-    //     <td>${cliente.telefone}</td>
-    //     <td>${cliente.cidade}</td>
-    //     <td>
-    //         <button type="button" class="button green">editar</button>
-    //         <button type="button" class="button red">excluir</button>
-    //     </td>
-    //     `
-    //     document.querySelector('#tableCliente>tbody').appendChild(newRow)
-    // }
+    const createRow = (cliente) =>{
+        const newRow = document.createElement('tr')
+        newRow.innerHTML = `
+        <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
+        <td class="tabela__itemConsulta">${cliente["NOME FANTASIA"]}</td>
+        <td class="tabela__itemConsulta">${cliente["RAZAO SOCIAL"]}</td>
+        <td class="tabela__itemConsulta">${cliente.STATUS}</td>
+        <td class="tabela__itemConsulta">${cliente["CNAE PRINCIPAL DESCRICAO"]}</td>
+        <td class="tabela__itemConsulta">${cliente["CNAE PRINCIPAL CODIGO"]}</td>
+        <td class="tabela__itemConsulta">${cliente.CEP}</td>
+        <td class="tabela__itemConsulta">${cliente["DATA ABERTURA"]}</td>
+        <td class="tabela__itemConsulta">${cliente.DDD}</td>
+        <td class="tabela__itemConsulta">${cliente.TELEFONE}</td>
+        <td class="tabela__itemConsulta">${cliente.EMAIL}</td>
+        <td class="tabela__itemConsulta">${cliente["TIPO LOGRADOURO"]}</td>
+        <td class="tabela__itemConsulta">${cliente.LOGRADOURO}</td>
+        <td class="tabela__itemConsulta">${cliente.NUMERO}</td>
+        <td class="tabela__itemConsulta">${cliente.COMPLEMENTO}</td>
+        <td class="tabela__itemConsulta">${cliente.BAIRRO}</td>
+        <td class="tabela__itemConsulta">${cliente.MUNICIPIO}</td>
+        <td class="tabela__itemConsulta">${cliente.UF}</td>
+        </td>
+        `
+        document.querySelector('#tableConsulta>tbody').appendChild(newRow)
+    }
 
-    // const updadeTable = () =>{
-    //     const dbCliente = readCliente()
-    //     dbCliente.forEach(createRow)
-    // }
+    const updadeTable = () =>{
+        const dbCliente = readConsulta()
+        dbCliente.forEach(createRow)
+    }
 
 const abreModal = (e) =>{
     var botao = document.querySelector('.modal');
     botao.style.display ='inline-block'
     e.preventDefault()
 }
-const abreModalExibe = (e) =>{
-    var botaoExibe = document.querySelector('.modal_exibe');
-    botaoExibe.style.display = 'block';
-    // console.log()
-    e.preventDefault()
-}
+
+    
+    const abreModalExibe = (e) =>{
+        var botaoExibe = document.querySelector('.modal_exibe');
+        var formCons = document.querySelector('.flexbox-geral')
+        formCons.style.display = 'none'
+        botaoExibe.style.display = 'block';
+
+        
+        updadeTable()
+        e.preventDefault()
+      
+    }
 
 // ----------------------
 

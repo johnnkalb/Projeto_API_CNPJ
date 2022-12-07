@@ -41,11 +41,14 @@ header:hover{
     display: flex;
     justify-content: center;
 }
+
+/*  */
 .flexbox-geral{
-    display: none;
+    display: flex;
     border: 1px solid;
     border-radius: 5px;
     box-shadow: 6px 5px 14px;
+    flex-direction: column;
 }
 .form-control{
     color: rgb(45, 19, 161);
