@@ -201,4 +201,9 @@ footer{
      .formulario {
         width: 80%;
     }
+    .modal-form{
+        
+    margin: 31vh 6vh;
+
+    }
 }
