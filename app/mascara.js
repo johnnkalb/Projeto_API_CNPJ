@@ -21,7 +21,7 @@ e.preventDefault();
  input.addEventListener("keypress", formatarCNPJ);
 
  input.addEventListener('dblclick', limpaCampo)
- 
+
  function limpaCampo(){
     const botaoSalva = document.getElementById('botaoAbreModal')
 
@@ -39,3 +39,8 @@ e.preventDefault();
 }
 
 
+// const retornoCNPJ = () =>{
+//     cnpj= e.target.value.replace(/\D/g,"")                
+//  cnpj.replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5") 
+//     //  e.target.value = v;
+// }

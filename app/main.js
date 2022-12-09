@@ -69,7 +69,7 @@ const inserirDados = document.querySelector('.ola')
                     // inputModf()
                     exibeSalva()
                     deuCerto()
-                    
+                    // retornoCNPJ()
                     }
             }
 
