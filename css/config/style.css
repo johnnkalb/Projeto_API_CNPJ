@@ -201,6 +201,6 @@ footer{
      .formulario {
         width: 80%;
     }
-    .span--sucesso{margin: -1.2em 14.5em;}
+    .span--sucesso{margin: -1.2em 14.5em;     padding: 0px 6px;}
     .span--error{    margin: -1.2em 14.5em;    padding: 0px 6px;}
 }
