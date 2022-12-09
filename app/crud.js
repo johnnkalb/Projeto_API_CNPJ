@@ -128,9 +128,10 @@ const abreModal = (e) =>{
     
     const abreModalExibe = (e) =>{
         var botaoExibe = document.querySelector('.modal_exibe');
-        
+        var modalForm = document.querySelector('.flexbox-geral');
        
         botaoExibe.style.display = 'block';
+        modalForm.style.display = 'none'
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
@@ -138,9 +139,19 @@ const abreModal = (e) =>{
        
     }
 
+
+    const abreFormularioVolta = () =>{
+        var formulario = document.querySelector('.flexbox-geral')
+        var modalExibir = document.querySelector('.modal_Exibe')
+
+        modalExibir.style.display = 'none'
+        formulario.style.display = 'flex'
+    }
 // ----------------------
 
-  
+  document.getElementById('botaoExibir')
+    .addEventListener('click', abreFormularioVolta)
+
     document.getElementById('botaoAbreModal')
         .addEventListener('click', abreModal)
 

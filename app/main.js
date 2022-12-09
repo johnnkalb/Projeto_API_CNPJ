@@ -70,7 +70,11 @@ const inserirDados = document.querySelector('.ola')
 
     // const URL = `https://api-publica.speedio.com.br/buscarcnpj?cnpj=${search}`;
         exibir.addEventListener('click', (e)=>{
+            var formulario = document.querySelector('.flexbox-geral');
+            var modalExibe = document.querySelector('.modal_exibe')
 
+            formulario.style.display = 'flex'
+            modalExibe.style.display = 'none'
             if(cnpj.value == '' || valorCNPJ.length >= 14){
                 deuErro()
             }
