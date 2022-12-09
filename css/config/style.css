@@ -54,6 +54,7 @@ header:hover{
     color: rgb(45, 19, 161);
     font-weight: bold;
     font-size: 1.2em;
+    width: 98%;
 }
 
 .mensagem-error{

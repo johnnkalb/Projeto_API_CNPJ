@@ -129,9 +129,11 @@ const abreModal = (e) =>{
     const abreModalExibe = (e) =>{
         var botaoExibe = document.querySelector('.modal_exibe');
         var modalForm = document.querySelector('.flexbox-geral');
+        var botaoSalvar = document.getElementById('botaoAbreModal')
        
         botaoExibe.style.display = 'block';
-        modalForm.style.display = 'none'
+        modalForm.style.display = 'none';
+        botaoSalvar.style.display = 'none'
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
