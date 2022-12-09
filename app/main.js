@@ -27,6 +27,7 @@ const inserirDados = document.querySelector('.ola')
 
     const deuCerto = () =>{
     errorSpan2.style.display = 'none'
+    errorSpan1.style.display = 'none'
     cnpj.className = "form-control input--sucesso";
     sucessoSpan1.style.display = 'inline';
     }
@@ -35,7 +36,7 @@ const inserirDados = document.querySelector('.ola')
         errorSpan1.style.display = 'none';
         errorSpan2.style.display = 'none'
         sucessoSpan1.style.display ='none'
-        
+
     }
 
     const showData = (result)=>{
