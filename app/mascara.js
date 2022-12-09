@@ -21,8 +21,15 @@ e.preventDefault();
  input.addEventListener("keypress", formatarCNPJ);
 
  input.addEventListener('dblclick', limpaCampo)
+ 
  function limpaCampo(){
+    const botaoSalva = document.getElementById('botaoAbreModal')
+
     input.value = '';
+    deuLimpo()
+    document.querySelector(".formulario").reset()
+    botaoSalva.style.display = 'none'
+
 }
 
  function formatarCNPJ(e){

@@ -30,6 +30,13 @@ const inserirDados = document.querySelector('.ola')
     cnpj.className = "form-control input--sucesso";
     sucessoSpan1.style.display = 'inline';
     }
+    const deuLimpo = () =>{
+        cnpj.className = 'form-control'
+        errorSpan1.style.display = 'none';
+        errorSpan2.style.display = 'none'
+        sucessoSpan1.style.display ='none'
+        
+    }
 
     const showData = (result)=>{
         if(result.error){
