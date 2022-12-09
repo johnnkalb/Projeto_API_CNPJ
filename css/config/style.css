@@ -192,15 +192,12 @@ footer{
 
 
 @media only screen and (max-width: 600px)  {
-    .flexbox-1{
-        display: flex;
-        flex-direction: column;
-     }   
+    .flexbox-1{display: flex;flex-direction: column;}   
 
-     .secao__botoes{
-        display: flex;
-     }
-     .botao__consulta{
-        padding: 0.8em 0.5em;
-     }
+     .secao__botoes{display: flex;}
+
+     .botao__consulta{padding: 0.8em 0.5em;}
+     .formulario {
+        width: 80%;
+    }
 }
