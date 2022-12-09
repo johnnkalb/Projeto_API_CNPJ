@@ -117,7 +117,7 @@ footer{
     color: white;
     font-weight: bold;
     padding: 0.5em 1em;
-    margin: 0.5em 0;
+    margin: 0.5em 0.2em;
     border-radius: 3px;
 }
 .botao__consulta--salvar{
@@ -181,4 +181,26 @@ footer{
 /*  */
 .label__botaoSalvar{
         margin: -0.5em 0.5em 1em;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px)  {
+    .flexbox-1{
+        display: flex;
+        flex-direction: column;
+     }   
+
+     .secao__botoes{
+        display: flex;
+     }
+     .botao__consulta{
+        padding: 0.8em 0.5em;
+     }
 }
