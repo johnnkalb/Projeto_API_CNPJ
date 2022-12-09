@@ -19,12 +19,16 @@ e.preventDefault();
  // Cria Máscara para CPF
  input.addEventListener('mousemove',formatarCNPJ);
  input.addEventListener("keypress", formatarCNPJ);
- 
+
+ input.addEventListener('dblclick', limpaCampo)
+ function limpaCampo(){
+    input.value = '';
+}
+
  function formatarCNPJ(e){
  var v= e.target.value.replace(/\D/g,"")                
  v=v.replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5") 
-
      e.target.value = v;
-
 }
+
 
