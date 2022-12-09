@@ -91,8 +91,8 @@ const prevent = (event) =>{
     const createRow = (cliente) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-        <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
+        <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
         <td class="tabela__itemConsulta">${cliente.STATUS}</td>
         <td class="tabela__itemConsulta">${cliente.CNAE_PRINCIPAL_DESCRICAO}</td>
