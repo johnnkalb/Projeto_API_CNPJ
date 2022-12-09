@@ -113,6 +113,7 @@ footer{
 .botao__consulta{
     background: blue;
     border: none;
+    font-size: 14px;
     color: white;
     font-weight: bold;
     padding: 0.5em 1em;
@@ -124,6 +125,7 @@ footer{
     border: none;
     color: white;
     font-weight: bold;
+    font-size: 14px;
     padding: 0.5em 1em;
     margin: 0.5em 0;
     border-radius: 3px;
@@ -177,3 +179,6 @@ footer{
 /* EXITO NA CONSULTA DA INPUT */
 
 /*  */
+.label__botaoSalvar{
+        margin: -0.5em 0.5em 1em;
+}
