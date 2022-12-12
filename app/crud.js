@@ -88,10 +88,10 @@ const prevent = (event) =>{
     }
     // }
 
-    const createRow = (cliente) =>{
+    const createRow = (cliente, index) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-        <td class="tabela__itemConsulta"><div class='editTable'><input type='button' value='Opções' id='editarTeste'></div></td>
+        <td class="tabela__itemConsulta"><div class='editTable'><button type="button" class="button green" id='edit-${index}'>Editar</button></div></td>
         <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
         <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
@@ -149,7 +149,6 @@ const abreModal = (e) =>{
        
     }
 
-
     const abreFormularioVolta = () =>{
         var formulario = document.querySelector('.flexbox-geral')
         var modalExibir = document.querySelector('.modal_Exibe')
@@ -157,6 +156,49 @@ const abreModal = (e) =>{
         modalExibir.style.display = 'none'
         formulario.style.display = 'flex'
     }
+
+    
+const fillfields = (client) =>{ //preenche as infomeções já salvas
+    document.getElementById('CNPJ').value = client.CNPJ
+    document.getElementById('NOMEFANTASIA').value = client.NOME_FANTASIA
+    document.getElementById('SITUACAO').value = client.STATUS
+    document.getElementById('RAZAOSOCIAL').value = client.RAZAO_SOCIAL
+    document.getElementById('CNAEDESC').value = client.CNAE_PRINCIPAL_DESCRICAO
+    document.getElementById('CNAECOD').value = client.CNAE_PRINCIPAL_CODIGO
+    document.getElementById('CEP').value = client.CEP
+    document.getElementById('ABERTURA').value = client.DATA_ABERTURA
+    document.getElementById('DDD').value = client.DDD
+    document.getElementById('TELEFONE').value = client.TELEFONE
+    document.getElementById('EMAIL').value = client.EMAIL
+    document.getElementById('TIPOLOGRADOURO').value = client.TIPO_LOGRADOURO
+    document.getElementById('LOGRADOURO').value = client.LOGRADOURO
+    document.getElementById('NUMERO').value = client.NUMERO
+    document.getElementById('COMPLEMENTO').value = client.COMPLEMENTO
+    document.getElementById('BAIRRO').value = client.BAIRRO
+    document.getElementById('MUNICIPIO').value = client.MUNICIPIO
+    document.getElementById('UF').value = client.UF
+}
+
+const editConsulta = (index) =>{
+    const client = readConsulta()[index]
+    fillfields(client)
+    console.log(client)
+    abreFormularioVolta()
+}
+
+const editDelete = (event) => {
+    if (event.target.type == 'button'){
+
+        const [action, index] = event.target.id.split('-')
+        
+        if(action == 'edit'){
+            editConsulta(index)
+        }else{
+           deleteConsulta(index)
+        }
+    }
+    
+}
 // ----------------------
 
   document.getElementById('botaoExibir')
@@ -170,3 +212,6 @@ const abreModal = (e) =>{
 
     document.getElementById('botaoSalvar')
     .addEventListener('click', saveCliente)
+
+    document.querySelector('#tableConsulta>tbody')
+    .addEventListener('click', editDelete)

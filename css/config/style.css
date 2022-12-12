@@ -236,7 +236,7 @@ footer{
     display: flex;
     justify-content: center;
 }
-.editTable>input{
+.editTable>button{
     background: blue;
     border: none;
     font-size: 14px;
@@ -246,7 +246,7 @@ footer{
     margin: 0.1em 0.1em;
     border-radius: 3px;
 }
-.editTable>input:hover{
+.editTable>button:hover{
     background: #0c0c97;
     cursor: pointer;
 }
