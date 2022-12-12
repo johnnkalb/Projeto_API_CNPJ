@@ -228,3 +228,19 @@ footer{
     margin: 31vh 6vh;
     }
 }
+
+
+.editTable{
+    display: flex;
+    justify-content: center;
+}
+.editTable>input{
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.2em 0.5em;
+    width: 96%;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkseagreen;
+    background: none;
+}
