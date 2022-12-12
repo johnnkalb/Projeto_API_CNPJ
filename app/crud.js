@@ -91,7 +91,7 @@ const prevent = (event) =>{
     const createRow = (cliente, index) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-        <td class="tabela__itemConsulta"><div class='editTable'><button type="button" class="button green" id='edit-${index}'>Editar</button></div></td>
+        <td class="tabela__itemConsulta"><div class='editTable'> <button type="button" class="button green" id='edit-${index}'>Editar</button></div></td>
         <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
         <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
@@ -153,8 +153,8 @@ const abreModal = (e) =>{
         var formulario = document.querySelector('.flexbox-geral')
         var modalExibir = document.querySelector('.modal_Exibe')
 
-        modalExibir.style.display = 'none'
-        formulario.style.display = 'flex'
+        modalExibir.style.display = 'none';
+        formulario.style.display = 'flex';
     }
 
     
@@ -183,7 +183,7 @@ const editConsulta = (index) =>{
     const client = readConsulta()[index]
     fillfields(client)
     console.log(client)
-    abreFormularioVolta()
+    // openModal()
 }
 
 const editDelete = (event) => {
@@ -193,9 +193,9 @@ const editDelete = (event) => {
         
         if(action == 'edit'){
             editConsulta(index)
-            abreFormularioVolta()
+            switchModalExibe()
         }else{
-           console.log('AQ')
+           deleteConsulta(index)
         }
     }
     
