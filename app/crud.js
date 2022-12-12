@@ -91,6 +91,7 @@ const prevent = (event) =>{
     const createRow = (cliente) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
+
         <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
         <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
@@ -110,6 +111,7 @@ const prevent = (event) =>{
         <td class="tabela__itemConsulta">${cliente.MUNICIPIO}</td>
         <td class="tabela__itemConsulta">${cliente.UF}</td>
         </td>
+    
         `
         document.querySelector('#tableConsulta>tbody').appendChild(newRow)
     }

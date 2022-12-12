@@ -120,6 +120,11 @@ footer{
     padding: 0.5em 1em;
     margin: 0.5em 0.2em;
     border-radius: 3px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 .botao__consulta--salvar{
     background: green;
@@ -130,6 +135,11 @@ footer{
     padding: 0.5em 1em;
     margin: 0.5em 0;
     border-radius: 3px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .botao__consulta--salvar:hover{
     background:#115f14 ;
@@ -137,6 +147,7 @@ footer{
 .botao__consulta:hover{
     background: #0c0c97;
     cursor: pointer;
+    
 }
 
 
@@ -163,6 +174,11 @@ footer{
     padding: 1px 6px;
     border-radius: 100%;
     display: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .span--sucesso{
     font-size: 1.1em;
@@ -173,6 +189,11 @@ footer{
     padding: 1px 6px;
     border-radius: 100%;
     display: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
         /*  */
@@ -184,7 +205,9 @@ footer{
     margin: 0em 0em 0.4em;
 }
 
-
+.tabela__itemConsulta{
+    cursor: pointer;
+}
 
 
 
