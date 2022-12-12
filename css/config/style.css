@@ -144,7 +144,7 @@ footer{
     -ms-user-select: none;
     user-select: none;
 }
-.botao__consulta--salvar:hover{
+.botao__consulta--salvar:hover, .botao__consulta--modificar:hover{
     background:#115f14 ;
 }
 .botao__consulta:hover{
@@ -177,7 +177,9 @@ footer{
     transition: 0.3s;
     cursor: pointer;
 }
-
+.botao__consulta--delete:hover{
+    background-color: rgb(190, 11, 11);
+}
 
 /* SESSÂO DE ERRO NA INPUT VAZIA */
 #error{
