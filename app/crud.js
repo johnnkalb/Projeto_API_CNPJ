@@ -114,8 +114,14 @@ const prevent = (event) =>{
         document.querySelector('#tableConsulta>tbody').appendChild(newRow)
     }
 
+    const clearTable = () =>{//Limpa a Tabela para não duplicar as informações
+        const rows = document.querySelectorAll('#tableConsulta>tbody tr')
+        rows.forEach(row => row.parentNode.removeChild(row))
+    }
+
     const updadeTable = () =>{
         const dbCliente = readConsulta()
+        clearTable() //antes de atualizar limpa a tabela, para não duplicar
         dbCliente.forEach(createRow)
     }
 
