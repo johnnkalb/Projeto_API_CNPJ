@@ -149,6 +149,10 @@ const abreModal = (e) =>{
        
     }
 
+    const abreBotaoModifica = () =>{
+        
+    }
+
     const abreFormularioVolta = () =>{
         var formulario = document.querySelector('.flexbox-geral')
         var modalExibir = document.querySelector('.modal_Exibe')
@@ -194,6 +198,7 @@ const editDelete = (event) => {
         if(action == 'edit'){
             editConsulta(index)
             switchModalExibe()
+            abreBotaoModifica()
         }else{
            deleteConsulta(index)
         }
