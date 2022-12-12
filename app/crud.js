@@ -193,8 +193,9 @@ const editDelete = (event) => {
         
         if(action == 'edit'){
             editConsulta(index)
+            abreFormularioVolta()
         }else{
-           deleteConsulta(index)
+           console.log('AQ')
         }
     }
     
