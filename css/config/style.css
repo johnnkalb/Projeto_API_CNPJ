@@ -207,9 +207,9 @@ footer{
     margin: 0em 0em 0.4em;
 }
 
-.tabela__itemConsulta{
+/* .tabela__itemConsulta{
     cursor: pointer;
-}
+} */
 
 
 
@@ -247,7 +247,6 @@ footer{
     border-radius: 3px;
 }
 .editTable>input:hover{
-    color: white;
-    background: blue;
+    background: #0c0c97;
     cursor: pointer;
 }
