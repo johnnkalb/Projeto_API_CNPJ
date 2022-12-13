@@ -32,8 +32,9 @@ const setLocalStorage = (dbCNPJ) => localStorage.setItem("db_CNPJ", JSON.stringi
 // DELETE
 const deleteConsulta = (index) =>{
     const dbCNPJ = readConsulta()
-    dbCNPJ.splice(index,1)
+    dbCNPJ.splice(index, 1)
     setLocalStorage(dbCNPJ)
+    updadeTable()
 }  
 
 const updadeConsulta = (index, consulta) => {
@@ -108,7 +109,7 @@ const prevent = (event) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
         <td class="tabela__itemConsulta" id='crudTabela'><div class='editTable'> <button type="button" class="buttonEdit" id='edit-${index}'>Editar</button></div>
-        <div class='editTable'> <button type="button" class="botao__consulta--delete" id='botaoDeletar'>Exluir</button></div>
+        <div class='editTable'> <button type="button" class="botao__consulta--delete" id='delete-${index}'>Exluir</button></div>
         </td>
         <td class="tabela__itemConsulta">${consulta.CNPJ}</td>
         <td class="tabela__itemConsulta">${consulta.NOME_FANTASIA}</td>
@@ -243,10 +244,9 @@ const mostraBotaoConsulta = () =>{
                 abreCrud()
             }else{
                 const client = readConsulta()[index]
-                const response = confirm(`Deseja Excluir "${client.RAZAO_SOCIAL}"?.`)
+                const response = confirm(`Deseja Realmente Excluir "${client.NOME_FANTASIA}"?`)
                     if(response){
                         deleteConsulta(index)
-                        updadeTable()
                     }
                 
             }
@@ -270,7 +270,3 @@ const mostraBotaoConsulta = () =>{
 
     document.querySelector('#tableConsulta>tbody')
     .addEventListener('click', editDelete)
-
-    
-    document.querySelector(botaoDeletar)
-    .addEventListener('click', deletaUser)
