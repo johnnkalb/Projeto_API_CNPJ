@@ -239,6 +239,12 @@ footer{
     cursor: pointer;
 } */
 
+#botaoEditar{
+    display: none;
+}
+#botaoDeletar{
+    display: none;
+}
 
 
 
