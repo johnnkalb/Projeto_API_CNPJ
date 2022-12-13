@@ -242,8 +242,13 @@ const mostraBotaoConsulta = () =>{
                 switchModalExibe()
                 abreCrud()
             }else{
-            deleteConsulta(index)
-            updadeTable()
+                const client = readConsulta()[index]
+                const response = confirm(`Deseja Excluir "${client.RAZAO_SOCIAL}"?.`)
+                    if(response){
+                        deleteConsulta(index)
+                        updadeTable()
+                    }
+                
             }
         }
         
