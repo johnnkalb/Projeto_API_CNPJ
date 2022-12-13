@@ -159,6 +159,7 @@ const abreModal = (e) =>{
 
         modalExibir.style.display = 'none';
         formulario.style.display = 'flex';
+    mostraBotaoConsulta()
     }
 
     
@@ -182,6 +183,27 @@ const fillfields = (client) =>{ //preenche as infomeções já salvas
     document.getElementById('MUNICIPIO').value = client.MUNICIPIO
     document.getElementById('UF').value = client.UF
 }
+const mostraBotaoConsulta = () =>{
+    botaoConsulta.style.display = 'inline-block'
+}
+
+// BOTOES DE CRUD
+const abreCrud = () =>{
+    const botaoEdit = document.getElementById('botaoEditar')
+    const botaoDeletar = document.getElementById('botaoDeletar')
+   
+
+    botaoEdit.style.display = 'inline-block'
+    botaoDeletar.style.display = 'inline-block'
+}
+const fechaCrud = () =>{
+    const botaoEdit = document.getElementById('botaoEditar')
+    const botaoDeletar = document.getElementById('botaoDeletar')
+    
+    botaoEdit.style.display = 'none'
+    botaoDeletar.style.display ='none'
+}
+
 
 const editConsulta = (index) =>{
     const client = readConsulta()[index]
@@ -199,6 +221,7 @@ const editDelete = (event) => {
             editConsulta(index)
             switchModalExibe()
             abreBotaoModifica()
+            abreCrud()
         }else{
            deleteConsulta(index)
         }

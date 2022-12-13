@@ -271,7 +271,7 @@ footer{
     justify-content: center;
 }
 .editTable>button{
-    background: blue;
+    background: #0c0c79;
     border: none;
     font-size: 14px;
     color: white;
@@ -279,8 +279,9 @@ footer{
     padding: 0.5em 1em;
     margin: 0.1em 0.1em;
     border-radius: 3px;
+    transition: 0.2s;
 }
 .editTable>button:hover{
-    background: #0c0c97;
+    background: #0b0b42;
     cursor: pointer;
 }
