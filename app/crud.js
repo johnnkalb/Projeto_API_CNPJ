@@ -245,7 +245,7 @@ const mostraBotaoConsulta = () =>{
                 abreCrud()
             }else{
                 const client = readConsulta()[index]
-                const response = confirm(`Deseja Realmente Excluir "${client.NOME_FANTASIA}"?`)
+                const response = confirm(`Deseja Excluir "${client.NOME_FANTASIA}"?`)
                     if(response){
                         deleteConsulta(index)
                     }
