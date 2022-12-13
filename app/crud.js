@@ -221,12 +221,6 @@ const mostraBotaoConsulta = () =>{
         fillfields(client)
     }
 
-    const deletaUser = (e) =>{
-        deleteConsulta(e)
-        e.preventDefault
-    }
-
-
     const editDelete = (event) => {
         if (event.target.type == 'button'){
 
@@ -249,6 +243,7 @@ const mostraBotaoConsulta = () =>{
                 abreCrud()
             }else{
             deleteConsulta(index)
+            updadeTable()
             }
         }
         
