@@ -86,7 +86,7 @@ footer{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #ccc;
+    background: white;
     /* filter: opacity(0.5); */
     margin: 32vh 60vh;
     padding: 2em;
@@ -106,7 +106,19 @@ footer{
 }
 #botaoSalvar{
     width: 30%;
-    padding: 0.5em;
+    background: green;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0.5em 1em;
+    /* margin: 0.5em 0; */
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#botaoSalvar:hover{
+    background: #115f14;
 }
 #NOMEDEPESQUISA{
     padding: 0.7em 15em 0.7em 0.4em;
@@ -238,6 +250,7 @@ footer{
 /*  */
 .label__botaoSalvar{
     margin: 0em 0em 0.4em;
+    font-size: 1.2em;
 }
 
 /* .tabela__itemConsulta{
