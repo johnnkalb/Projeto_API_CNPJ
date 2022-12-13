@@ -1,5 +1,8 @@
 const cnpj_box = document.getElementById('CNPJ')
 
+
+const botaoDeletar = document.querySelector('.botao__consulta--delete')
+
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_CNPJ')) ?? [] // Lê as Informações do LocalStorage, Transforma em JSON, e Armazena na Constante db_CNPJ, Caso Não Exista Cria um Array Vazio ( ??[] )
 
 const setLocalStorage = (dbCNPJ) => localStorage.setItem("db_CNPJ", JSON.stringify(dbCNPJ)) // Posta A Informação No local Storage
@@ -81,9 +84,15 @@ const prevent = (event) =>{
                             UF: document.querySelector('#UF').value,
             }
             
+            
+            const index = document.getElementById('CNPJ').dataset.index
+        if (index=='new'){
             createConsulta(cliente)
             updadeTable()
             location.reload()
+        }else{
+            console.log('Editando...')
+        }
         } 
     }
     // }
@@ -198,8 +207,8 @@ const mostraBotaoConsulta = () =>{
     //     botaoDeletar.className = `botao__consulta--delete delete-${index}`
     // }
     const fechaCrud = () =>{
-        const botaoEdit = document.getElementById('botaoEditar')
-        const botaoDeletar = document.getElementById('botaoDeletar')
+        const botaoEdit = document.querySelector('.botao__consulta--modificar')
+        // const botaoDeletar = document.querySelector('.botao__consulta--delete')
         botaoEdit.style.display = 'none'
         botaoDeletar.style.display ='none'}
     // 
@@ -210,18 +219,24 @@ const mostraBotaoConsulta = () =>{
         fillfields(client)
     }
 
+    const deletaUser = (e) =>{
+        deleteCliente(e)
+        e.preventDefault
+    }
+
+
     const editDelete = (event) => {
         if (event.target.type == 'button'){
 
             const [action, index] = event.target.id.split('-')
             
             const abreCrud = () =>{
-                const botaoEdit = document.getElementById('botaoEditar')
-                const botaoDeletar = document.getElementById('botaoDeletar')
+                const botaoEdit = document.querySelector('.botao__consulta--modificar')
         
                 botaoEdit.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
-                botaoDeletar.className = `botao__consulta--delete dlete-${index}`
+                botaoDeletar.id = `delete-${index}`
+                // botaoDeletar.preventDefault()
             }
 
 
@@ -232,7 +247,6 @@ const mostraBotaoConsulta = () =>{
                 // abreBotaoModifica()
                 abreCrud()
                     // deleteCliente(index)
-
             }else{
             console.log('A')
             }
@@ -256,3 +270,7 @@ const mostraBotaoConsulta = () =>{
 
     document.querySelector('#tableConsulta>tbody')
     .addEventListener('click', editDelete)
+
+    
+    document.querySelector(botaoDeletar)
+    .addEventListener('click', deletaUser)

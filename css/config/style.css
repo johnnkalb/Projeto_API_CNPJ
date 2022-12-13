@@ -164,6 +164,8 @@ footer{
     border-radius: 3px;
     transition: 0.3s;
     cursor: pointer;
+
+    display: none;
 }
 .botao__consulta--delete{
     background: red;
@@ -176,6 +178,8 @@ footer{
     border-radius: 3px;
     transition: 0.3s;
     cursor: pointer;
+
+    display: none;
 }
 .botao__consulta--delete:hover{
     background-color: rgb(190, 11, 11);
@@ -238,14 +242,6 @@ footer{
 /* .tabela__itemConsulta{
     cursor: pointer;
 } */
-
-#botaoEditar{
-    display: none;
-}
-#botaoDeletar{
-    display: none;
-}
-
 
 
 
