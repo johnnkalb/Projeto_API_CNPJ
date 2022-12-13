@@ -188,47 +188,42 @@ const mostraBotaoConsulta = () =>{
     botaoConsulta.style.display = 'inline-block'
 }
 
-// BOTOES DE CRUD
-const abreCrud = () =>{
-    const botaoEdit = document.getElementById('botaoEditar')
-    const botaoDeletar = document.getElementById('botaoDeletar')
-   
+    // BOTOES DE CRUD
+    const abreCrud = () =>{
+        const botaoEdit = document.getElementById('botaoEditar')
+        const botaoDeletar = document.getElementById('botaoDeletar')
+        botaoEdit.style.display = 'inline-block'
+        botaoDeletar.style.display = 'inline-block'}
+    const fechaCrud = () =>{
+        const botaoEdit = document.getElementById('botaoEditar')
+        const botaoDeletar = document.getElementById('botaoDeletar')
+        botaoEdit.style.display = 'none'
+        botaoDeletar.style.display ='none'}
+    // 
 
-    botaoEdit.style.display = 'inline-block'
-    botaoDeletar.style.display = 'inline-block'
-}
-const fechaCrud = () =>{
-    const botaoEdit = document.getElementById('botaoEditar')
-    const botaoDeletar = document.getElementById('botaoDeletar')
-    
-    botaoEdit.style.display = 'none'
-    botaoDeletar.style.display ='none'
-}
-
-
-const editConsulta = (index) =>{
-    const client = readConsulta()[index]
-    fillfields(client)
-    console.log(client)
-    // openModal()
-}
-
-const editDelete = (event) => {
-    if (event.target.type == 'button'){
-
-        const [action, index] = event.target.id.split('-')
-        
-        if(action == 'edit'){
-            editConsulta(index)
-            switchModalExibe()
-            // abreBotaoModifica()
-            abreCrud()
-        }else{
-           deleteConsulta(index)
-        }
+    // PREENCHE AS INFORMAÇÕES CONFOR FOR CLICADO
+    const editConsulta = (index) =>{
+        const client = readConsulta()[index]
+        fillfields(client)
     }
-    
-}
+
+    const editDelete = (event) => {
+        if (event.target.type == 'button'){
+
+            const [action, index] = event.target.id.split('-')
+            
+            if(action == 'edit'){
+                editConsulta(index)
+                switchModalExibe()
+                // abreBotaoModifica()
+                abreCrud()
+            }else{
+            console.log('A')
+            }
+        }
+        
+    }
+
 // ----------------------
 
   document.getElementById('botaoExibir')
