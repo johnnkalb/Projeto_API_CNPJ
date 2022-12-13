@@ -170,16 +170,17 @@ footer{
 .botao__consulta--delete{
     background: red;
     border: none;
+    font-size: 14px;
     color: white;
     font-weight: bold;
-    font-size: 14px;
-    padding: 0.5em 1em;
-    margin: 0.5em 0.25em;;
+    padding: 0.5em 0.5em;
+    margin: 0.1em 0.1em;
     border-radius: 3px;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 
-    display: none;
+
+    /* display: none; */
 }
 .botao__consulta--delete:hover{
     background-color: rgb(190, 11, 11);
@@ -243,9 +244,25 @@ footer{
     cursor: pointer;
 } */
 
+#crudTabela{
+    display: flex;
+}
 
-
-
+.buttonEdit{
+    background: #0c0c79;
+    border: none;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 0.5em;
+    margin: 0.1em 0.1em;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.buttonEdit:hover{
+    background: #0b0b42;
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 600px)  {
     .flexbox-1{display: flex;flex-direction: column;}   
@@ -265,19 +282,4 @@ footer{
 .editTable{
     display: flex;
     justify-content: center;
-}
-.editTable>button{
-    background: #0c0c79;
-    border: none;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    margin: 0.1em 0.1em;
-    border-radius: 3px;
-    transition: 0.2s;
-}
-.editTable>button:hover{
-    background: #0b0b42;
-    cursor: pointer;
 }

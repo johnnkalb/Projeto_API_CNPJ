@@ -30,11 +30,17 @@ const setLocalStorage = (dbCNPJ) => localStorage.setItem("db_CNPJ", JSON.stringi
 //   }
 
 // DELETE
-const deleteCliente = (index) =>{
+const deleteConsulta = (index) =>{
     const dbCNPJ = readConsulta()
     dbCNPJ.splice(index,1)
     setLocalStorage(dbCNPJ)
 }  
+
+const updadeConsulta = (index, consulta) => {
+    const dbCNPJ = readConsulta()
+    dbCNPJ[index]= consulta
+    setLocalStorage(dbCNPJ)
+}
 
 //READ
 const readConsulta = () => getLocalStorage()
@@ -54,12 +60,12 @@ const prevent = (event) =>{
     event.preventDefault()
 }
 
- const saveCliente = (e) =>{
+ const saveConsulta = (e) =>{
     if(isValidConsulta()){
         // if(getLocalStorage() != null){
         //       console.log('a')
         // }else{
-            const cliente = {
+            const consulta = {
                 // A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
                 CNPJ: document.querySelector('#CNPJ').value,
                 NOME_FANTASIA: document.querySelector('#NOMEFANTASIA').value,
@@ -87,38 +93,41 @@ const prevent = (event) =>{
             
             const index = document.getElementById('CNPJ').dataset.index
         if (index=='new'){
-            createConsulta(cliente)
+            createConsulta(consulta)
             updadeTable()
-            location.reload()
+            // location.reload()
         }else{
-            console.log('Editando...')
+            updadeConsulta(index, consulta)
+            updadeTable()
         }
         } 
     }
     // }
 
-    const createRow = (cliente, index) =>{
+    const createRow = (consulta, index) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-        <td class="tabela__itemConsulta"><div class='editTable'> <button type="button" class="button green" id='edit-${index}'>Editar</button></div></td>
-        <td class="tabela__itemConsulta">${cliente.CNPJ}</td>
-        <td class="tabela__itemConsulta">${cliente.NOME_FANTASIA}</td>
-        <td class="tabela__itemConsulta">${cliente.RAZAO_SOCIAL}</td>
-        <td class="tabela__itemConsulta">${cliente.STATUS}</td>
-        <td class="tabela__itemConsulta">${cliente.CNAE_PRINCIPAL_DESCRICAO}</td>
-        <td class="tabela__itemConsulta">${cliente.CNAE_PRINCIPAL_CODIGO}</td>
-        <td class="tabela__itemConsulta">${cliente.CEP}</td>
-        <td class="tabela__itemConsulta">${cliente.DATA_ABERTURA}</td>
-        <td class="tabela__itemConsulta">${cliente.DDD}</td>
-        <td class="tabela__itemConsulta">${cliente.TELEFONE}</td>
-        <td class="tabela__itemConsulta">${cliente.EMAIL}</td>
-        <td class="tabela__itemConsulta">${cliente.TIPO_LOGRADOURO}</td>
-        <td class="tabela__itemConsulta">${cliente.LOGRADOURO}</td>
-        <td class="tabela__itemConsulta">${cliente.NUMERO}</td>
-        <td class="tabela__itemConsulta">${cliente.COMPLEMENTO}</td>
-        <td class="tabela__itemConsulta">${cliente.BAIRRO}</td>
-        <td class="tabela__itemConsulta">${cliente.MUNICIPIO}</td>
-        <td class="tabela__itemConsulta">${cliente.UF}</td>
+        <td class="tabela__itemConsulta" id='crudTabela'><div class='editTable'> <button type="button" class="buttonEdit" id='edit-${index}'>Editar</button></div>
+        <div class='editTable'> <button type="button" class="botao__consulta--delete" id='botaoDeletar'>Exluir</button></div>
+        </td>
+        <td class="tabela__itemConsulta">${consulta.CNPJ}</td>
+        <td class="tabela__itemConsulta">${consulta.NOME_FANTASIA}</td>
+        <td class="tabela__itemConsulta">${consulta.RAZAO_SOCIAL}</td>
+        <td class="tabela__itemConsulta">${consulta.STATUS}</td>
+        <td class="tabela__itemConsulta">${consulta.CNAE_PRINCIPAL_DESCRICAO}</td>
+        <td class="tabela__itemConsulta">${consulta.CNAE_PRINCIPAL_CODIGO}</td>
+        <td class="tabela__itemConsulta">${consulta.CEP}</td>
+        <td class="tabela__itemConsulta">${consulta.DATA_ABERTURA}</td>
+        <td class="tabela__itemConsulta">${consulta.DDD}</td>
+        <td class="tabela__itemConsulta">${consulta.TELEFONE}</td>
+        <td class="tabela__itemConsulta">${consulta.EMAIL}</td>
+        <td class="tabela__itemConsulta">${consulta.TIPO_LOGRADOURO}</td>
+        <td class="tabela__itemConsulta">${consulta.LOGRADOURO}</td>
+        <td class="tabela__itemConsulta">${consulta.NUMERO}</td>
+        <td class="tabela__itemConsulta">${consulta.COMPLEMENTO}</td>
+        <td class="tabela__itemConsulta">${consulta.BAIRRO}</td>
+        <td class="tabela__itemConsulta">${consulta.MUNICIPIO}</td>
+        <td class="tabela__itemConsulta">${consulta.UF}</td>
         </td>
        
         `
@@ -131,9 +140,9 @@ const prevent = (event) =>{
     }
 
     const updadeTable = () =>{
-        const dbCliente = readConsulta()
+        const dbCNPJ = readConsulta()
         clearTable() //antes de atualizar limpa a tabela, para não duplicar
-        dbCliente.forEach(createRow)
+        dbCNPJ.forEach(createRow)
     }
 
 const abreModal = (e) =>{
@@ -146,11 +155,11 @@ const abreModal = (e) =>{
     const abreModalExibe = (e) =>{
         var botaoExibe = document.querySelector('.modal_exibe');
         var modalForm = document.querySelector('.flexbox-geral');
-        var botaoSalvar = document.getElementById('botaoAbreModal')
+        // var botaoSalvar = document.getElementById('botaoAbreModal')
        
         botaoExibe.style.display = 'block';
         modalForm.style.display = 'none';
-        botaoSalvar.style.display = 'none'
+        // botaoSalvar.style.display = 'none'
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
@@ -192,35 +201,28 @@ const fillfields = (client) =>{ //preenche as infomeções já salvas
     document.getElementById('BAIRRO').value = client.BAIRRO
     document.getElementById('MUNICIPIO').value = client.MUNICIPIO
     document.getElementById('UF').value = client.UF
+    document.getElementById('CNPJ').dataset.index = client.index
 }
 const mostraBotaoConsulta = () =>{
     botaoConsulta.style.display = 'inline-block'
 }
 
-    // BOTOES DE CRUD
-    // const abreCrud = (a, index) =>{
-    //     const botaoEdit = document.getElementById('botaoEditar')
-    //     const botaoDeletar = document.getElementById('botaoDeletar')
-
-    //     botaoEdit.style.display = 'inline-block'
-    //     botaoDeletar.style.display = 'inline-block'
-    //     botaoDeletar.className = `botao__consulta--delete delete-${index}`
-    // }
     const fechaCrud = () =>{
-        const botaoEdit = document.querySelector('.botao__consulta--modificar')
+        const botaoSalvar = document.querySelector('.botao__consulta--salvar')
         // const botaoDeletar = document.querySelector('.botao__consulta--delete')
-        botaoEdit.style.display = 'none'
+        botaoSalvar.style.display = 'none'
         botaoDeletar.style.display ='none'}
     // 
 
     // PREENCHE AS INFORMAÇÕES CONFOR FOR CLICADO
     const editConsulta = (index) =>{
         const client = readConsulta()[index]
+        client.index = index
         fillfields(client)
     }
 
     const deletaUser = (e) =>{
-        deleteCliente(e)
+        deleteConsulta(e)
         e.preventDefault
     }
 
@@ -231,12 +233,12 @@ const mostraBotaoConsulta = () =>{
             const [action, index] = event.target.id.split('-')
             
             const abreCrud = () =>{
-                const botaoEdit = document.querySelector('.botao__consulta--modificar')
+                const botaoSalvar = document.querySelector('.botao__consulta--salvar')
         
-                botaoEdit.style.display = 'inline-block'
+                botaoSalvar.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
                 botaoDeletar.id = `delete-${index}`
-                // botaoDeletar.preventDefault()
+
             }
 
 
@@ -244,11 +246,9 @@ const mostraBotaoConsulta = () =>{
             if(action == 'edit'){
                 editConsulta(index)
                 switchModalExibe()
-                // abreBotaoModifica()
                 abreCrud()
-                    // deleteCliente(index)
             }else{
-            console.log('A')
+            deleteConsulta(index)
             }
         }
         
@@ -266,7 +266,7 @@ const mostraBotaoConsulta = () =>{
         .addEventListener('click', abreModalExibe)
 
     document.getElementById('botaoSalvar')
-    .addEventListener('click', saveCliente)
+    .addEventListener('click', saveConsulta)
 
     document.querySelector('#tableConsulta>tbody')
     .addEventListener('click', editDelete)
