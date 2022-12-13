@@ -189,11 +189,14 @@ const mostraBotaoConsulta = () =>{
 }
 
     // BOTOES DE CRUD
-    const abreCrud = () =>{
-        const botaoEdit = document.getElementById('botaoEditar')
-        const botaoDeletar = document.getElementById('botaoDeletar')
-        botaoEdit.style.display = 'inline-block'
-        botaoDeletar.style.display = 'inline-block'}
+    // const abreCrud = (a, index) =>{
+    //     const botaoEdit = document.getElementById('botaoEditar')
+    //     const botaoDeletar = document.getElementById('botaoDeletar')
+
+    //     botaoEdit.style.display = 'inline-block'
+    //     botaoDeletar.style.display = 'inline-block'
+    //     botaoDeletar.className = `botao__consulta--delete delete-${index}`
+    // }
     const fechaCrud = () =>{
         const botaoEdit = document.getElementById('botaoEditar')
         const botaoDeletar = document.getElementById('botaoDeletar')
@@ -212,11 +215,24 @@ const mostraBotaoConsulta = () =>{
 
             const [action, index] = event.target.id.split('-')
             
+            const abreCrud = () =>{
+                const botaoEdit = document.getElementById('botaoEditar')
+                const botaoDeletar = document.getElementById('botaoDeletar')
+        
+                botaoEdit.style.display = 'inline-block'
+                botaoDeletar.style.display = 'inline-block'
+                botaoDeletar.className = `botao__consulta--delete dlete-${index}`
+            }
+
+
+
             if(action == 'edit'){
                 editConsulta(index)
                 switchModalExibe()
                 // abreBotaoModifica()
                 abreCrud()
+                    // deleteCliente(index)
+
             }else{
             console.log('A')
             }
