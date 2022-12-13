@@ -240,6 +240,7 @@ const mostraBotaoConsulta = () =>{
 
             if(action == 'edit'){
                 editConsulta(index)
+                deuLimpo()
                 switchModalExibe()
                 abreCrud()
             }else{
