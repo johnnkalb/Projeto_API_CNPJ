@@ -145,13 +145,14 @@ const abreModal = (e) =>{
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
+        fechaCrud()
         e.preventDefault()
        
     }
 
-    const abreBotaoModifica = () =>{
+    // const abreBotaoModifica = () =>{
         
-    }
+    // }
 
     const abreFormularioVolta = () =>{
         var formulario = document.querySelector('.flexbox-geral')
@@ -220,7 +221,7 @@ const editDelete = (event) => {
         if(action == 'edit'){
             editConsulta(index)
             switchModalExibe()
-            abreBotaoModifica()
+            // abreBotaoModifica()
             abreCrud()
         }else{
            deleteConsulta(index)
