@@ -1,6 +1,5 @@
 const cnpj_box = document.getElementById('CNPJ')
 
-
 const botaoDeletar = document.querySelector('.botao__consulta--delete')
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_CNPJ')) ?? [] // Lê as Informações do LocalStorage, Transforma em JSON, e Armazena na Constante db_CNPJ, Caso Não Exista Cria um Array Vazio ( ??[] )
@@ -189,7 +188,7 @@ const abreModal = (e) =>{
 
     
 const fillfields = (client) =>{ //preenche as infomeções já salvas
-    document.getElementById('CNPJ').value = client.CNPJ.replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5")
+    document.getElementById('CNPJ').value = client.CNPJ
     document.getElementById('NOMEFANTASIA').value = client.NOME_FANTASIA
     document.getElementById('SITUACAO').value = client.STATUS
     document.getElementById('RAZAOSOCIAL').value = client.RAZAO_SOCIAL
