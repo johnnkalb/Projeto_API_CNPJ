@@ -93,13 +93,18 @@ const prevent = (event) =>{
             
             
             const index = document.getElementById('CNPJ').dataset.index
+            e.preventDefault()
+            fechaModal()
         if (index=='new'){
+            
             createConsulta(consulta)
             updadeTable()
+            abreModalExibe()
             // location.reload()
         }else{
             updadeConsulta(index, consulta)
             updadeTable()
+            abreModalExibe()
         }
         } 
     }
@@ -205,6 +210,7 @@ const fillfields = (client) =>{ //preenche as infomeções já salvas
     document.getElementById('CNPJ').dataset.index = client.index
 }
 const mostraBotaoConsulta = () =>{
+    const botaoConsulta = document.getElementById('botaoAbreModal')
     botaoConsulta.style.display = 'inline-block'
 }
 
@@ -240,9 +246,11 @@ const mostraBotaoConsulta = () =>{
 
             if(action == 'edit'){
                 editConsulta(index)
+                mostraBotaoConsulta()
                 deuLimpo()
                 switchModalExibe()
                 abreCrud()
+                
             }else{
                 const client = readConsulta()[index]
                 const response = confirm(`Deseja Excluir "${client.NOME_FANTASIA}"?`)
