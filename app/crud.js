@@ -116,7 +116,7 @@ const prevent = (event) =>{
         <td class="tabela__itemConsulta" id='crudTabela'><div class='editTable'> <button type="button" class="buttonEdit" id='edit-${index}'>Editar</button></div>
         <div class='editTable'> <button type="button" class="botao__consulta--delete" id='delete-${index}'>Exluir</button></div>
         </td>
-        <td class="tabela__itemConsulta">${consulta.CNPJ}</td>
+        <td class="tabela__itemConsulta">${consulta.CNPJ.replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5")}</td>
         <td class="tabela__itemConsulta">${consulta.NOME_FANTASIA}</td>
         <td class="tabela__itemConsulta">${consulta.RAZAO_SOCIAL}</td>
         <td class="tabela__itemConsulta">${consulta.STATUS}</td>
@@ -189,7 +189,7 @@ const abreModal = (e) =>{
 
     
 const fillfields = (client) =>{ //preenche as infomeções já salvas
-    document.getElementById('CNPJ').value = client.CNPJ
+    document.getElementById('CNPJ').value = client.CNPJ.replace(/^(\d{2})(\d{3})?(\d{3})?(\d{4})?(\d{2})?/, "$1.$2.$3/$4-$5")
     document.getElementById('NOMEFANTASIA').value = client.NOME_FANTASIA
     document.getElementById('SITUACAO').value = client.STATUS
     document.getElementById('RAZAOSOCIAL').value = client.RAZAO_SOCIAL
