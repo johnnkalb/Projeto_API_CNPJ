@@ -13,9 +13,10 @@
     overflow-y: hidden;
     white-space: nowrap;
     width: 90%;
+    border-right: 1px solid;
 }
 #tableConsulta{
-    margin: 1em 0em;
+    /* margin: 1em 0em; */
     border: 1px solid black;
 }
 .tabela__itemConsulta{

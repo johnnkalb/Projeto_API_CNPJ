@@ -134,7 +134,7 @@ footer{
     margin: 0.5em 0.2em;
     border-radius: 3px;
     transition: 0.3s;
-
+    box-shadow: 1px 1px 5px black;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -151,7 +151,7 @@ footer{
     border-radius: 3px;
     transition: 0.3s;
     cursor: pointer;
-
+    box-shadow: 1px 1px 5px black;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -177,11 +177,13 @@ footer{
     border-radius: 3px;
     transition: 0.3s;
     cursor: pointer;
-
+    box-shadow: 1px 1px 5px black;
     display: none;
 }
 .botao__consulta--delete{
     background: red;
+    box-shadow: 1px 1px 5px black;
+
     border: none;
     font-size: 14px;
     color: white;
@@ -265,6 +267,8 @@ footer{
 
 .buttonEdit{
     background: darkorange;
+    box-shadow: 1px 1px 5px black;
+
     border: none;
     font-size: 14px;
     color: white;
