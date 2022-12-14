@@ -108,6 +108,7 @@ footer{
     width: 30%;
     background: green;
     border: none;
+    box-shadow: 2px 1px 7px black;
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -160,7 +161,7 @@ footer{
     background:#115f14 ;
 }
 .botao__consulta:hover{
-    background: #0c0c97;
+    background: rgb(19, 19, 151);
     cursor: pointer;
     
 }
@@ -262,7 +263,7 @@ footer{
 }
 
 .buttonEdit{
-    background: #0c0c79;
+    background: darkorange;
     border: none;
     font-size: 14px;
     color: white;
@@ -273,7 +274,7 @@ footer{
     transition: 0.2s;
 }
 .buttonEdit:hover{
-    background: #0b0b42;
+    background: rgb(168, 97, 9);
     cursor: pointer;
 }
 
