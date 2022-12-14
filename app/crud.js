@@ -220,7 +220,7 @@ const mostraBotaoConsulta = () =>{
         botaoDeletar.style.display ='none'}
     // 
 
-    // PREENCHE AS INFORMAÇÕES CONFOR FOR CLICADO
+    // PREENCHE AS INFORMAÇÕES CONFORME FOR CLICADO
     const editConsulta = (index) =>{
         const client = readConsulta()[index]
         client.index = index
