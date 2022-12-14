@@ -66,11 +66,12 @@ const inserirDados = document.querySelector('.ola')
                                         document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                         document.querySelector('#UF').value = result.UF
                     
-                                        console.log(result)
+                                        // console.log(result)
                     // inputModf()
+                    // retornoCNPJ()
                     exibeSalva()
                     deuCerto()
-                    // retornoCNPJ()
+                    
                     }
             }
 

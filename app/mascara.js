@@ -19,6 +19,7 @@ e.preventDefault();
  // Cria Máscara para CPF
  input.addEventListener('mousemove',formatarCNPJ);
  input.addEventListener("keypress", formatarCNPJ);
+ 
 
  input.addEventListener('dblclick', limpaCampo)
 
