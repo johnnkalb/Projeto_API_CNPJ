@@ -260,6 +260,7 @@ footer{
 
 #crudTabela{
     display: flex;
+    justify-content: center;
 }
 
 .buttonEdit{
@@ -272,6 +273,7 @@ footer{
     margin: 0.1em 0.1em;
     border-radius: 3px;
     transition: 0.2s;
+    /* width: 2.5em; */
 }
 .buttonEdit:hover{
     background: rgb(168, 97, 9);

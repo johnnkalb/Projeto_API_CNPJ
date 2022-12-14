@@ -66,6 +66,7 @@ const inserirDados = document.querySelector('.ola')
                                         document.querySelector('#MUNICIPIO').value = result.MUNICIPIO
                                         document.querySelector('#UF').value = result.UF
                     
+                                        console.log(result)
                     // inputModf()
                     exibeSalva()
                     deuCerto()

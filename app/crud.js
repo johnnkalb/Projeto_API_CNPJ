@@ -75,7 +75,7 @@ const prevent = (event) =>{
                 CNAE_PRINCIPAL_DESCRICAO: document.querySelector('#CNAEDESC').value,
     
                     CNAE_PRINCIPAL_CODIGO: document.querySelector('#CNAECOD').value,
-                    CEP: document.querySelector('#CEP'),
+                    CEP: document.querySelector('#CEP').value,
                     DATA_ABERTURA: document.querySelector('#ABERTURA').value,
                     DDD: document.querySelector('#DDD').value,
     
@@ -104,7 +104,7 @@ const prevent = (event) =>{
         } 
     }
     // }
-
+{/* <img src="./icons/edit-solid.svg" alt="EDITAR"></img> */}
     const createRow = (consulta, index) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
@@ -228,7 +228,7 @@ const mostraBotaoConsulta = () =>{
             const [action, index] = event.target.id.split('-')
             
             const abreCrud = () =>{
-                const botaoSalvar = document.querySelector('.botao__consulta--salvar')
+                const botaoSalvar = document.querySelector('.botao__consulta--salvar>img')
         
                 botaoSalvar.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
