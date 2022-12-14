@@ -62,6 +62,7 @@ const prevent = (event) =>{
 }
 
  const saveConsulta = (e) =>{
+    e.preventDefault()
     if(isValidConsulta()){
         // if(getLocalStorage() != null){
         //       console.log('a')
@@ -95,7 +96,8 @@ const prevent = (event) =>{
             const index = document.getElementById('CNPJ').dataset.index
         if (index=='new'){
             createConsulta(consulta)
-            abreCrud()
+           fechaModal()
+            abreModalExibe()
             updadeTable()
             // location.reload()
         }else{
@@ -165,6 +167,7 @@ const abreModal = (e) =>{
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
+        
         fechaCrud()
         e.preventDefault()
        
