@@ -24,3 +24,8 @@ const switchModal = () => {
       form.reset();
     }
   }
+
+  const fechaModal = () =>{
+    const modal = document.querySelector('.modal')
+    modal.style.display = 'none'
+  }

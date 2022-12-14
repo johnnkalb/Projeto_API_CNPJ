@@ -62,7 +62,6 @@ const prevent = (event) =>{
 }
 
  const saveConsulta = (e) =>{
-    e.preventDefault()
     if(isValidConsulta()){
         // if(getLocalStorage() != null){
         //       console.log('a')
@@ -96,8 +95,6 @@ const prevent = (event) =>{
             const index = document.getElementById('CNPJ').dataset.index
         if (index=='new'){
             createConsulta(consulta)
-           fechaModal()
-            abreModalExibe()
             updadeTable()
             // location.reload()
         }else{
@@ -167,7 +164,6 @@ const abreModal = (e) =>{
         // RESOLVER O PROBLEMA DAQUI
         
         updadeTable()
-        
         fechaCrud()
         e.preventDefault()
        
@@ -226,21 +222,19 @@ const mostraBotaoConsulta = () =>{
         fillfields(client)
     }
 
-    const abreCrud = () =>{
-        const botaoSalvar = document.querySelector('.botao__consulta--salvar')
-
-        botaoSalvar.style.display = 'inline-block'
-        botaoDeletar.style.display = 'inline-block'
-        botaoDeletar.id = `delete-${index}`
-
-    }
-
     const editDelete = (event) => {
         if (event.target.type == 'button'){
 
             const [action, index] = event.target.id.split('-')
             
-          
+            const abreCrud = () =>{
+                const botaoSalvar = document.querySelector('.botao__consulta--salvar')
+        
+                botaoSalvar.style.display = 'inline-block'
+                botaoDeletar.style.display = 'inline-block'
+                botaoDeletar.id = `delete-${index}`
+
+            }
 
 
 
