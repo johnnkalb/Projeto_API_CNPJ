@@ -16,7 +16,6 @@ const switchModal = () => {
   const btn = document.querySelector('.modalBtn')
   btn.addEventListener('click', switchModal);
 
-  const 
   
   window.onclick = function(event) {
       const modal = document.querySelector('.modal')
