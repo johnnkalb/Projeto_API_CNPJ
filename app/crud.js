@@ -104,7 +104,7 @@ const prevent = (event) =>{
         } 
     }
     // }
-{/* <img src="./icons/edit-solid.svg" alt="EDITAR"></img> */}
+
     const createRow = (consulta, index) =>{
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
@@ -228,7 +228,7 @@ const mostraBotaoConsulta = () =>{
             const [action, index] = event.target.id.split('-')
             
             const abreCrud = () =>{
-                const botaoSalvar = document.querySelector('.botao__consulta--salvar>img')
+                const botaoSalvar = document.querySelector('.botao__consulta--salvar')
         
                 botaoSalvar.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
