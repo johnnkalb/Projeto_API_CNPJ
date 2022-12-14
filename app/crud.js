@@ -228,7 +228,7 @@ const mostraBotaoConsulta = () =>{
             const [action, index] = event.target.id.split('-')
             
             const abreCrud = () =>{
-                const botaoSalvar = document.querySelector('.botao__consulta--salvar')
+                const botaoSalvar = document.querySelector('.botao__consulta--salvar>img')
         
                 botaoSalvar.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
