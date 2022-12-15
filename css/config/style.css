@@ -284,7 +284,7 @@ footer{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 1000px)  {
     .flexbox-1{display: flex;flex-direction: column;}   
 
      .secao__botoes{display: flex;}
@@ -296,8 +296,8 @@ footer{
     .modal-form{
     margin: 31vh 6vh;
     }
-}
 
+}
 
 .editTable{
     display: flex;
