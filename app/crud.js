@@ -63,7 +63,12 @@ const isValidConsulta = () =>{
 const itens = getLocalStorage()
 const existe = itens.find(elemento => elemento.CNPJ === CNPJ.value)
 
-
+const reportaExiste = () =>{
+    if (localStorage.getItem("item") === null) {
+        // Não está na localStorage
+    }
+}
+    
  const saveConsulta = (e) =>{
     if(isValidConsulta()){
         const consulta = {
@@ -168,7 +173,6 @@ const abreModal = (e) =>{
         updadeTable()
         fechaCrud()
         e.preventDefault()
-       
     }
 
     // const abreBotaoModifica = () =>{
