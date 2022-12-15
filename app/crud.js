@@ -49,7 +49,7 @@ const reportaExiste = () =>{
 }
     
  const saveConsulta = (e) =>{
-    
+
     if(isValidConsulta()){
         const consulta = {
             // A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
@@ -83,11 +83,11 @@ const reportaExiste = () =>{
         updadeTable()
         abreModalExibe()
         // location.reload()
-    }else{
-        updadeConsulta(index, consulta)
-        updadeTable()
-        abreModalExibe()
-    }
+        }else{
+            updadeConsulta(index, consulta)
+            updadeTable()
+            abreModalExibe()
+            }
     }
 }
 
