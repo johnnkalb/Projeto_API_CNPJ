@@ -56,15 +56,20 @@ const isValidConsulta = () =>{
     return cnpj_box.reportValidity() 
 }
 
-const prevent = (event) =>{
-    event.preventDefault()
-}
+// const prevent = (event) =>{
+//     event.preventDefault()
+// }
+
+const itens = getLocalStorage()
+const existe = itens.find(elemento => elemento.CNPJ === CNPJ.value)
+
 
  const saveConsulta = (e) =>{
     if(isValidConsulta()){
-        // if(getLocalStorage() != null){
-        //       console.log('a')
-        // }else{
+        if(existe){
+            consulta.id = existe.id 
+            console.log('já Existe')
+        }else{
             const consulta = {
                 // A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
                 CNPJ: document.querySelector('#CNPJ').value,
@@ -105,7 +110,7 @@ const prevent = (event) =>{
             updadeTable()
             abreModalExibe()
         }
-        } 
+        } }
     }
     // }
 
@@ -238,24 +243,21 @@ const mostraBotaoConsulta = () =>{
                 botaoSalvar.style.display = 'inline-block'
                 botaoDeletar.style.display = 'inline-block'
                 botaoDeletar.id = `delete-${index}`
-
             }
 
-
-
-            if(action == 'edit'){
-                editConsulta(index)
-                mostraBotaoConsulta()
-                deuLimpo()
-                switchModalExibe()
-                abreCrud()
-                
-            }else{
-                const client = readConsulta()[index]
-                const response = confirm(`Deseja Excluir "${client.NOME_FANTASIA}"?`)
-                    if(response){
-                        deleteConsulta(index)
-                    }
+                if(action == 'edit'){
+                    editConsulta(index)
+                    mostraBotaoConsulta()
+                    deuLimpo()
+                    switchModalExibe()
+                    abreCrud()
+                    
+                }else{
+                    const client = readConsulta()[index]
+                    const response = confirm(`Deseja Excluir "${client.NOME_FANTASIA}"?`)
+                        if(response){
+                            deleteConsulta(index)
+                        }
                 
             }
         }
