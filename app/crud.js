@@ -7,27 +7,6 @@ const getLocalStorage = () => JSON.parse(localStorage.getItem('db_CNPJ')) ?? [] 
 const setLocalStorage = (dbCNPJ) => localStorage.setItem("db_CNPJ", JSON.stringify(dbCNPJ)) // Posta A Informação No local Storage
 
 
-// const tempConsulta = {
-//     NOME_FANTASIA: "QUERY",
-//     RAZAO_SOCIAL: "QUERY TECNOLOGIA DA INFORMACAO LTDA",
-//     CNPJ: "32840757000180",
-//     STATUS: "ATIVA",
-//     CNAE_PRINCIPAL_DESCRICAO: "Desenvolvimento e licenciamento de programas de computador customizáveis",
-//     CNAE_PRINCIPAL_CODIGO: "6202300",
-//     CEP: "65060541",
-//     DATA_ABERTURA: "21/02/2019",
-//     DDD: "98",
-//     TELEFONE: "81270800",
-//     EMAIL: "roberiolemos@gmail.com",
-//     TIPO_LOGRADOURO: "RODOVIA",
-//     LOGRADOURO: "MA - 201/ ESTRADA DE RIBAMAR",
-//     NUMERO: "43",
-//     COMPLEMENTO: "",
-//     BAIRRO: "FORQUILHA",
-//     MUNICIPIO: "Sao luis",
-//     UF: "MA"
-//   }
-
 // DELETE
 const deleteConsulta = (index) =>{
     const dbCNPJ = readConsulta()
