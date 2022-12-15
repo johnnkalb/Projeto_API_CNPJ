@@ -78,16 +78,16 @@ const reportaExiste = () =>{
         const index = document.getElementById('CNPJ').dataset.index
         e.preventDefault()
         fechaModal()
-    if (index=='new'){
-        createConsulta(consulta)
-        updadeTable()
-        abreModalExibe()
-        // location.reload()
-        }else{
-            updadeConsulta(index, consulta)
-            updadeTable()
-            abreModalExibe()
-            }
+            if (index=='new'){
+                createConsulta(consulta)
+                updadeTable()
+                abreModalExibe()
+                // location.reload()
+                }else{
+                    updadeConsulta(index, consulta)
+                    updadeTable()
+                    abreModalExibe()
+                    }
     }
 }
 
