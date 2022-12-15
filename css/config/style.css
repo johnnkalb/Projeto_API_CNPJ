@@ -189,7 +189,7 @@ footer{
     color: white;
     font-weight: bold;
     padding: 0.5em 0.5em;
-    margin: 0.1em 0.1em;
+    margin: 0.1em 0.2em;
     border-radius: 3px;
     transition: 0.2s;
     cursor: pointer;
@@ -274,7 +274,7 @@ footer{
     color: white;
     font-weight: bold;
     padding: 0.5em 0.5em;
-    margin: 0.1em 0.1em;
+    margin: 0.1em 0.2em;
     border-radius: 3px;
     transition: 0.2s;
     /* width: 2.5em; */
