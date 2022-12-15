@@ -49,6 +49,7 @@ const reportaExiste = () =>{
 }
     
  const saveConsulta = (e) =>{
+    
     if(isValidConsulta()){
         const consulta = {
             // A_PESQUISA: document.querySelector('#NOMEDEPESQUISA').value,
