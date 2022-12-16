@@ -40,3 +40,22 @@ API que consulta CNPJ, Feita Exclusivamente Para Fins de Estudos.
             updadeTable()
             abreModalExibe()
         }
+
+
+         if (index=='new'){
+                if(getLocalStorage(consulta.CNPJ) === null){
+                    console.log(localStorage.getItem("db_CNPJ"))
+                    createConsulta(consulta)
+                    updadeTable()
+                    abreModalExibe()
+                    // location.reload()
+                }else{
+                    console.log('diferente de nulo') 
+                    console.log(localStorage.getItem("db_CNPJ"))
+                    console.log(consulta.CNPJ)
+                }
+                }else{
+                    updadeConsulta(index, consulta)
+                    updadeTable()
+                    abreModalExibe()
+                    }
