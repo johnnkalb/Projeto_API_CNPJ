@@ -79,10 +79,14 @@ const reportaExiste = () =>{
         e.preventDefault()
         fechaModal()
             if (index=='new'){
-                createConsulta(consulta)
-                updadeTable()
-                abreModalExibe()
-                // location.reload()
+                if(existe === null){
+                    createConsulta(consulta)
+                    updadeTable()
+                    abreModalExibe()
+                    // location.reload()
+                }else{
+                    console.log('existe já pow')
+                }
                 }else{
                     updadeConsulta(index, consulta)
                     updadeTable()
